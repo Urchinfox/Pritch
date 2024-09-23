@@ -1,0 +1,24 @@
+.profile-order-progress div{
+    position: relative;
+    text-align: center;
+}
+.profile-order-progress div::after{
+    content: '';
+    width: 50px;
+    height: 5px;
+    position:absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid black;
+}
+.profile-order-progress .active::after{
+    background-color: black;
+}
+.profile-order-progress .disabled::after{
+    background-color: rgba(0, 0, 0, .1);
+    border:1px solid rgba(0, 0, 0, .1);
+}
+.profile-order-progress .disabled{
+    color : rgba(0, 0, 0, .1);
+}

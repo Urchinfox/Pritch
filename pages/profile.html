@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <%- include('./layout/header'); -%>
+
+    <div class="container">
+
+        <div class="row align-items-start">
+            <div class="col-4">
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab">
+                    <button class="text-start nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-personal-info" type="button">會員資料</button>
+                    <button class="text-start nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-order" type="button">訂單查詢</button>
+                    <button class="text-start nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-order-history" type="button" >歷史訂單</button>
+                    <button class="text-start nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" >重設密碼</button>
+                    <button class="mt-auto btn btn-outline-primary" type="button" >登出</button>
+
+                </div>
+
+            </div>
+            <div class="col-8">
+                <div class="tab-content" id="v-pills-tabContent">
+                  <div class="tab-pane fade active show border" id="v-personal-info">
+                    <form class="row">
+                        <div class="col-md-12">
+                        <label for="usarName" class="form-label"></label>
+                        <input type="text" class="form-control" id="usarName" required placeholder="使用者名稱">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="inputEmail4" class="form-label"></label>
+                            <input type="email" class="form-control" id="inputEmail4" required placeholder="Email">
+                        </div>
+                        <div class="col-12">
+                        <label for="tel" class="form-label"></label>
+                        <input type="tel" class="form-control" id="tel" placeholder="電話" required>
+                        </div>
+                        <h3 class="col-12">地址</h3>
+                        <div class="col-12 d-flex justify-content-between">
+                            <div>
+                                <label for="City" class="form-label"></label>
+                                <select id="City" class="form-select" required>
+                                <option selected>城市...</option>
+                                <option>台北市</option>
+                                <option>桃園市</option>
+                                <option>新竹市</option>
+                                <option>苗栗市</option>
+                                <option>高雄市</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="Religion" class="form-label"></label>
+                                <select id="Religion" class="form-select" required>
+                                <option selected>地區...</option>
+                                <option>永和區</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="inputZip" class="form-label"></label>
+                                <input type="text" class="form-control" id="inputZip" placeholder="郵寄區號" required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                        <label for="inputAddress" class="form-label"></label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="街道名稱">
+                        </div>
+                        <div class="col-12 text-end">
+                            <button type="submit" class="btn btn-primary ">更新個人資料</button>
+                        </div>
+
+                    </form>
+
+
+                    
+                  </div>
+
+                  <div class="tab-pane fade" id="v-order" >
+
+                    <div class="row">
+                        <div class="col-4">
+                            <select class="form-select form-select-sm">
+                                <option selected>2024</option>
+                                <option value="2">2023</option>
+                                <option value="3">2022</option>
+                              </select>
+                        </div>
+                        <div class="col-4">
+                            <select class="form-select form-select-sm">
+                                <option value="Mon" selected>選擇月份</option>
+                                <option value="1">Jan</option>
+                                <option value="2">Feb</option>
+                                <option value="3">Mar</option>
+                                <option value="4">Apr</option>
+                                <option value="5">May</option>
+                                <option value="6">Jun</option>
+                                <option value="7">Jul</option>
+                                <option value="8">Aug</option>
+                                <option value="9">Sep</option>
+                                <option value="10">Oct</option>
+                                <option value="11">Nov</option>
+                                <option value="12">Dec</option>
+                              </select>
+                        </div>
+                        <div class="col-4">
+                            <select class="form-select form-select-sm">
+                                <option selected>選擇日期</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                              </select>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" placeholder="產品編號or名稱">
+                            <i class="bi bi-search-heart"></i>
+                        </div>
+                        <div class="col-12">
+                            <button type="button" class="btn btn-primary w-100">查詢</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="d-flex justify-content-between">
+                            <p>訂單編號：xxx</p>
+                            <time datetime="" >日期:07/08/2024</time>
+                        </div>
+
+                        <div>
+                            <div class="row border">
+                                <div class="col-8">
+                                    <p>產品名稱: xx黑色洋裝 * 1</p>
+                                    <p>配送方式: 郵寄</p>
+                                    <p>付款方式: 信用卡</p>
+                                    <p>訂單金額: NT 2000$</p>
+                                    <p>收件資訊: xx市xx區xx路x號x樓</p>
+                                    <a href="javascrip:;" type="button" class="btn btn-primary">聯絡我們</a>
+                                    <a href="order-address.html" type="button" class="btn btn-primary">更改送貨地址</a>
+                                </div>
+                                <div class="col-4 text-end overflow-scroll" style="height: 200px;">
+                                    <img class="mb-1" src="https://fakeimg.pl/200x200/">
+                                    <img class="mb-1" src="https://fakeimg.pl/200x200/">
+                                </div>
+                                <div class="col-12 d-flex justify-content-between profile-order-progress">
+                                    <div class="active">接受訂單</div>
+                                    <div>撿貨</div>
+                                    <div>出貨</div>
+                                    <div>已送達</div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                  </div>
+
+
+                  <div class="tab-pane fade" id="v-order-history">
+                    <div>
+                        <div class="d-flex justify-content-between">
+                            <p>訂單編號：xxx</p>
+                            <time datetime="" >日期:07/08/2024</time>
+                        </div>
+                        <div class="row border">
+                            <div class="col-8">
+                                <p>產品名稱: xx黑色洋裝 * 1</p>
+                                <p>配送方式: 郵寄</p>
+                                <p>付款方式: 信用卡</p>
+                                <p>訂單金額: NT 2000$</p>
+                                <p>收件資訊: xx市xx區xx路x號x樓</p>
+                                <a href="comment.html" type="button" class="btn btn-primary">評論</a>
+                                <a href="refund.html" type="button" class="btn btn-primary">退貨</a>
+                            </div>
+                            <div class="col-4 text-end overflow-scroll" style="height: 200px;">
+                                <img class="mb-1" src="https://fakeimg.pl/200x200/">
+                                <img class="mb-1" src="https://fakeimg.pl/200x200/">
+                            </div>
+                            <div class="col-12 d-flex justify-content-between profile-order-progress">
+                                <div class="disabled">接受訂單</div>
+                                <div class="disabled">撿貨</div>
+                                <div class="disabled">出貨</div>
+                                <div class="active">已送達</div>
+
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+
+
+
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-settings">...</div>
+                </div>
+            </div>
+          </div>
+    </div>
+
+
+
+    
+
+      <%- include('./layout/footer'); -%>
+
+      <script type="module" src="../main.js"></script>
+</body>
+</html>

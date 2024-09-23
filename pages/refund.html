@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>refund</title>
+</head>
+<body>
+    <%- include('./layout/header'); -%>
+    <div class="container">
+
+        <div class="row align-items-start">
+            <div class="col-4">
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab">
+                    <button disabled class="text-start nav-link" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-personal-info" type="button">會員資料</button>
+                    <button disabled class="text-start nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-order" type="button">訂單查詢</button>
+                    <button class="text-start nav-link active" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-order-history" type="button" >歷史訂單</button>
+                    <button disabled class="text-start nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-reset-password" type="button" >重設密碼</button>
+                    <button class="mt-auto btn btn-outline-primary" type="button" >登出</button>
+
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="tab-content" id="v-pills-tabContent">
+                  <div class="tab-pane fade border" id="v-personal-info">                
+                  </div>
+
+                  <div class="tab-pane fade" id="v-order" >
+                  </div>
+                  <div class="tab-pane show active fade" id="v-order-history">
+                    <a href="profile.html" type="button"><i class="bi bi-box-arrow-left"></i></a>
+                    <div class="d-flex justify-content-between">
+                        <p>訂單編號:xxx</p>
+                        <time datetime="" >日期:07/08/2024</time>
+                    </div>
+                    <div class="border">
+                        <h2 class="text-center">退貨申請</h2>
+                        <h3>退貨原因</h3>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                尺寸不合
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                照片與實體不符
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                            <label class="form-check-label" for="flexRadioDefault3">
+                                商品瑕疵
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+                            <label class="form-check-label" for="flexRadioDefault4">
+                                訂錯商品
+                            </label>
+                          </div>
+                          <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">其它因素</label>
+                          </div>
+
+                        <div class="d-flex justify-content-between profile-order-progress">
+                            <div class="active">申請退貨</div>
+                            <div class="disabled">退貨審核中</div>
+                            <div class="disabled">已退貨</div>
+                        </div>
+
+                        <div class="text-end">
+                            <button type="button" class="btn btn-primary">送出</button>
+                        </div>
+
+        
+                
+                    </div>
+    
+                  </div>
+                  <div class="tab-pane fade" id="v-reset-password">...</div>
+                </div>
+            </div>
+          </div>
+    </div>
+    
+
+
+
+
+
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+</body>
+</html>
