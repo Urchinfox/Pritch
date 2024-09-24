@@ -16,7 +16,7 @@
                     <button class="text-start nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-personal-info" type="button">會員資料</button>
                     <button class="text-start nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-order" type="button">訂單查詢</button>
                     <button class="text-start nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-order-history" type="button" >歷史訂單</button>
-                    <button class="text-start nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" >重設密碼</button>
+                    <button class="text-start nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-reset-password" type="button" >重設密碼</button>
                     <button class="mt-auto btn btn-outline-primary" type="button" >登出</button>
 
                 </div>
@@ -171,7 +171,7 @@
                                 <p>訂單金額: NT 2000$</p>
                                 <p>收件資訊: xx市xx區xx路x號x樓</p>
                                 <a href="comment.html" type="button" class="btn btn-primary">評論</a>
-                                <a href="refund.html" type="button" class="btn btn-primary">退貨</a>
+                                <a href="return.html" type="button" class="btn btn-primary">退貨</a>
                             </div>
                             <div class="col-4 text-end overflow-scroll" style="height: 200px;">
                                 <img class="mb-1" src="https://fakeimg.pl/200x200/">
@@ -190,10 +190,34 @@
                     </div>
 
 
+                  </div>
+                  <div class="tab-pane fade" id="v-reset-password">
+                    
+                    <div>
+                        <h2>重設密碼</h2>
+                        <form action="">
+                            <div>
+                                <label for="email" class="form-label"></label>
+                                <input type="email" class="form-control" id="email" required placeholder="Email">
+                            </div>
+                            <div>
+                                <label for="oldPassword" class="form-label"></label>
+                                <input type="password" class="form-control" id="oldPassword" required placeholder="舊密碼">
+                            </div>
+                            <div>
+                                <label for="newPassword" class="form-label"></label>
+                                <input type="password" class="form-control" id="newPassword" required placeholder="新密碼">
+                            </div>
+                        </form>
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-primary" >送出</button>
+                        </div>
+                    </div>
+
+
 
 
                   </div>
-                  <div class="tab-pane fade" id="v-pills-settings">...</div>
                 </div>
             </div>
           </div>

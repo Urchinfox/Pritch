@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create/Edit Products</title>
+</head>
+<body>
+    <%- include('./layout/header'); -%>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <a href="backend.html">
+                    <i class="bi bi-box-arrow-left"></i>
+                </a>
+            </div>
+            <div class="col-8">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="productName" placeholder="產品名稱">
+                    <label for="productName">產品名稱</label>
+                    </div>
+                    <div class="form-floating">
+                    <textarea type="description" class="form-control" id="floatingPassword" placeholder="產品說明" style="height: 100px;"></textarea>
+                    <label for="description">產品說明</label>
+                    </div>
+                    <div class="mb-3">
+                    <label for="sku" class="form-label">貨號</label>
+                    <input type="text" class="form-control" id="sku">
+                    </div>
+                    <div class="mb-3">
+                    <label for="price" class="form-label">定價</label>
+                    <input type="text" class="form-control" id="price">
+                    </div>
+                    <div class="mb-3">
+                    <label for="promotion" class="form-label">促銷價</label>
+                    <input type="text" class="form-control" id="promotion">
+                    </div>
+                    <div class="mb-3">
+                    <label for="productDetail" class="form-label">產品細節</label>
+                    <textarea class="form-control" id="productDetail" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                    <label for="deliveryNote" class="form-label">配送須知</label>
+                    <textarea class="form-control" id="deliveryNote" rows="3"></textarea>
+                    </div>
+            </div>
+            <div class="col-4">
+                <div class="border-3 border mb-2">
+                    <div class="d-flex">
+                        <span>狀態：</span>
+                        <div class="d-flex">
+                            <span class="me-3"><i class="bi bi-circle-fill"></i>未發布</span>
+                            <span><i class="bi bi-circle"></i>已發布</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p>分類：<span>連身褲/褲子</span></p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <a class="d-block" href="#">複製</a>
+                            <a href="#">移至垃圾桶</a>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-secondary">發布</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <img width="300" height="300" src="https://fakeimg.pl/300x300/" alt="">
+                    <small class="d-block"><a href="#">圖片上傳</a></small>
+                </div>
+
+                <div>
+                    <label for="color"></label>
+                    <select class="form-select form-select-sm" id="color">
+                        <option selected>顏色</option>
+                        <option value="1">黑色</option>
+                        <option value="2">藍色</option>
+                        <option value="3">白色</option>
+                        </select>
+                        <label for="size"></label>
+                        <select class="form-select form-select-sm" id="size">
+                            <option selected>尺寸</option>
+                            <option value="1">S</option>
+                            <option value="2">M</option>
+                            <option value="3">L</option>
+                            <option value="4">XL</option>
+                            <option value="5">XXL</option>
+                        </select>
+                        <label for="category"></label>
+                        <select class="form-select form-select-sm" id="category">
+                            <option selected>分類</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                </div>
+
+                
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <script type="module" src="../main.js"></script>
+</body>
+</html>
