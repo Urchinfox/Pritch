@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit member</title>
+</head>
+<body>
+    <%- include('./layout/header'); -%>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <a href="backend.html"><i class="bi bi-box-arrow-left"></i></a>
+            </div>
+            <div class="col-8">
+                <form>
+                    <div>
+                    <label for="usarName" class="form-label"></label>
+                    <input type="text" class="form-control" id="usarName" required placeholder="王小明">
+                    </div>
+                    <div>
+                        <label for="inputEmail4" class="form-label"></label>
+                        <input type="email" class="form-control" id="inputEmail4" required placeholder="example@gmail.com">
+                    </div>
+                    <div>
+                    <label for="tel" class="form-label"></label>
+                    <input type="tel" class="form-control" id="tel" placeholder="09xx-xxx-xxx" required>
+                    </div>
+                    <h3>地址</h3>
+                    <div class=" d-flex justify-content-between">
+                        <div>
+                            <label for="City" class="form-label"></label>
+                            <select id="City" class="form-select" required>
+                            <option selected>台北市</option>
+                            <option>桃園市</option>
+                            <option>新竹市</option>
+                            <option>苗栗市</option>
+                            <option>高雄市</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="Religion" class="form-label"></label>
+                            <select id="Religion" class="form-select" required>
+                            <option>永和區</option>
+                            <option selected>大安區</option>
+
+                            </select>
+                        </div>
+                        <div>
+                            <label for="inputZip" class="form-label"></label>
+                            <input type="text" class="form-control" id="inputZip" placeholder="郵寄區號" required>
+                        </div>
+                    </div>
+                    <div>
+                    <label for="inputAddress" class="form-label"></label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="xx市xx路xx號x樓">
+                    </div>
+                    <div class=" text-end">
+                        <button type="submit" class="btn btn-primary ">完成</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="../main.js"></script>
+
+</body>
+</html>

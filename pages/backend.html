@@ -24,7 +24,7 @@
                   <div class="tab-pane fade show active" id="v-products">
                     <div>
                         <form action="">
-                            <div class="d-flex justify-content-betweenq">
+                            <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="createProduct.html" class="btn btn-primary">+新增商品</a>
                                     <a href="addCategory.html" class="btn btn-primary">+新增分類</a>
@@ -74,7 +74,7 @@
                             </thead>
                             <tbody>
                               <tr class="align-middle">
-                                <th scope="row">高調洋裝
+                                <td scope="row">高調洋裝
                                     <div>
                                         <small><a href="createProduct.html">編輯</a></small>
                                         <!-- Button trigger modal -->
@@ -100,14 +100,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                </th>
+                                </td>
                                 <td>000</td>
                                 <td>1500$</td>
                                 <td>洋裝</td>
                                 <td>08/09/2024</td>
                               </tr>
                               <tr class="align-middle">
-                                <th scope="row">低調洋裝
+                                <td scope="row">低調洋裝
                                     <div>
                                         <small><a href="createProduct.html">編輯</a></small>
                                         <!-- Button trigger modal -->
@@ -133,7 +133,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </th>
+                                </td>
                                 <td>001</td>
                                 <td>3000$</td>
                                 <td>洋裝</td>
@@ -145,14 +145,895 @@
 
 
                   </div>
-                  <div class="tab-pane fade" id="v-orders" >...</div>
-                  <div class="tab-pane fade" id="v-comments">...</div>
-                  <div class="tab-pane fade" id="v-stylist">...</div>
-                  <div class="tab-pane fade" id="v-members">...</div>
+                  <div class="tab-pane fade" id="v-orders" >
+                        <div>
+                            <form action="">
+                                <div class="d-flex justify-content-between">
+                                    <!-- Button trigger modal -->
+                                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#statistic">銷售統計</button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="statistic">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header border-0">
+                                                    <h5 class="modal-title" id="exampleModalLabel">銷售統計</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="modal-body">
+                                                            <div class="text-center">圓餅圖</div>
+                                                            <div class="text-end">
+                                                                <select class="">
+                                                                    <option selected>分類</option>
+                                                                    <option value="1">上衣</option>
+                                                                    <option value="2">裙子</option>
+                                                                    <option value="3">褲子</option>
+                                                                  </select>
+                                                            </div>
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                    <th scope="col"></th>
+                                                                    <th scope="col">訂單</th>
+                                                                    <th scope="col">狀態</th>
+                                                                    <th scope="col">金額</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="align-middle">
+                                                                    <td scope="row">
+                                                                        <!-- Button trigger modal -->
+                                                                        <small><a href="#" class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#checkOrder">
+                                                                            查看
+                                                                        </a></small>
+                                                                        <!-- Modal -->
+                                                                        <div class="modal fade">
+                                                                            <div class="modal-dialog">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header border-0">
+                                                                                    <h5 class="modal-title" id="exampleModalLabel">訂單編號：#001</h5>
+                                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <div class="modal-body">
+                                                                                            <p>產品名稱：夢幻上衣 * 1</span></p>
+                                                                                            <p>寄送地址：xx市 xx鄉 xx路 xx號 x樓</p>
+                                                                                            <p>總計：1500$</p>
+                                                                                            <p>付款方式：信用卡</p>
+                                                                                            <p>狀態：已出貨</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer border-0">
+                                                                                        <button type="button" class="btn btn-primary">編輯</button>
+                                                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>#001</td>
+                                                                    <td>已出貨</td>
+                                                                    <td>1500$</td>
+                                
+                                                                    </tr>
+                                                                    <tr class="align-middle">
+                                                                    <td scope="row">
+                                                                        <!-- Button trigger modal -->
+                                                                        <small><a href="#" class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#checkOrder2">
+                                                                            查看
+                                                                        </a></small>
+                                                                        <!-- Modal -->
+                                                                        <div class="modal fade">
+                                                                            <div class="modal-dialog">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header border-0">
+                                                                                    <h5 class="modal-title" id="exampleModalLabel">訂單編號：#002</h5>
+                                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <p>產品名稱：迷人洋裝 * 1</p>
+                                                                                        <p>寄送地址：xx市 xx鄉 xx路 xx號 x樓</p>
+                                                                                        <p>總計：3000$</p>
+                                                                                        <p>付款方式：信用卡</p>
+                                                                                        <p>狀態：付款成功</p>
+                                                                                    </div>
+                                                                                    <div class="modal-footer border-0">
+                                                                                        <button type="button" class="btn btn-primary">編輯</button>
+                                                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>#002</td>
+                                                                    <td>付款成功</td>
+                                                                    <td>3000$</td>
+                                
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                                
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer border-0">
+                                                        <button type="button" class="btn btn-primary">編輯</button>
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    <div class="d-flex">
+                                        <div>
+                                            <select class="form-select form-select-sm">
+                                                <option selected>2024</option>
+                                                <option value="2">2023</option>
+                                                <option value="3">2022</option>
+                                              </select>
+                                        </div>
+                                        <div>
+                                            <select class="form-select form-select-sm">
+                                              <option value="Mon" selected>選擇月份</option>
+                                              <option value="1">Jan</option>
+                                              <option value="2">Feb</option>
+                                              <option value="3">Mar</option>
+                                              <option value="4">Apr</option>
+                                              <option value="5">May</option>
+                                              <option value="6">Jun</option>
+                                              <option value="7">Jul</option>
+                                              <option value="8">Aug</option>
+                                              <option value="9">Sep</option>
+                                              <option value="10">Oct</option>
+                                              <option value="11">Nov</option>
+                                              <option value="12">Dec</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <select class="form-select form-select-sm">
+                                              <option selected>選擇日期</option>
+                                              <option value="1">1</option>
+                                              <option value="2">2</option>
+                                              <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <input class="" type="search" placeholder="搜尋品項">
+                                            <button type="button" class="btn btn-primary">搜尋</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+    
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">訂單</th>
+                                    <th scope="col">狀態</th>
+                                    <th scope="col">金額</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr class="align-middle">
+                                    <td scope="row">
+                                        <!-- Button trigger modal -->
+                                        <small><a href="#" class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#checkOrder">
+                                            查看
+                                        </a></small>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="checkOrder">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header border-0">
+                                                    <h5 class="modal-title" id="exampleModalLabel">訂單編號：#001</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="modal-body">
+                                                            <p>產品名稱：夢幻上衣 * 1</span></p>
+                                                            <p>寄送地址：xx市 xx鄉 xx路 xx號 x樓</p>
+                                                            <p>總計：1500$</p>
+                                                            <p>付款方式：信用卡</p>
+                                                            <p>狀態：已出貨</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer border-0">
+                                                        <button type="button" class="btn btn-primary">編輯</button>
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>#001</td>
+                                    <td>已出貨</td>
+                                    <td>1500$</td>
+
+                                  </tr>
+                                  <tr class="align-middle">
+                                    <td scope="row">
+                                        <!-- Button trigger modal -->
+                                        <small><a href="#" class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#checkOrder2">
+                                            查看
+                                        </a></small>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="checkOrder2">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header border-0">
+                                                    <h5 class="modal-title" id="exampleModalLabel">訂單編號：#002</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>產品名稱：迷人洋裝 * 1</p>
+                                                        <p>寄送地址：xx市 xx鄉 xx路 xx號 x樓</p>
+                                                        <p>總計：3000$</p>
+                                                        <p>付款方式：信用卡</p>
+                                                        <p>狀態：付款成功</p>
+                                                    </div>
+                                                    <div class="modal-footer border-0">
+                                                        <button type="button" class="btn btn-primary">編輯</button>
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>#002</td>
+                                    <td>付款成功</td>
+                                    <td>3000$</td>
+
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="v-comments">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">使用者</th>
+                            <th scope="col">留言資訊</th>
+                            <th scope="col">商品編號</th>
+
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="align-middle">
+                            <td scope="row">
+                                <div>
+                                    <small><a href="#">回覆</a></small>
+                                    <!-- Button trigger modal -->
+                                    <small><a class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#deleteComment">
+                                        刪除
+                                    </a></small>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="deleteComment">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header border-0">
+                                            <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-exclamation-triangle"></i></h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <p class="text-center">是否確定刪除此評論？</p>
+                                            </div>
+                                            <div class="modal-footer border-0">
+                                                <button type="button" class="btn btn-primary">確定</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-floating d-none">
+                                    <textarea class="form-control" id="responseComment0001" style="height: 100px"></textarea>
+                                    <label for="responseComment0001">Comments</label>
+                                  </div>
+                            </td>
+                            <td>Jamie</td>
+                            <td>出貨很快速</td>
+                            <td>0001</td>
+                          </tr>
+                          <tr class="align-middle">
+                            <td scope="row">
+                                <div>
+                                    <small><a href="#">回覆</a></small>
+                                    <!-- Button trigger modal -->
+                                    <small><a class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#deleteComment">
+                                        刪除
+                                    </a></small>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="deleteComment">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header border-0">
+                                            <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-exclamation-triangle"></i></h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <p class="text-center">是否確定刪除此評論？</p>
+                                            </div>
+                                            <div class="modal-footer border-0">
+                                                <button type="button" class="btn btn-primary">確定</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-floating d-none">
+                                    <textarea class="form-control" id="responseComment0002" style="height: 100px"></textarea>
+                                    <label for="responseComment0002">Comments</label>
+                                  </div>
+                            </td>
+                            <td>Kelly</td>
+                            <td>品質很好</td>
+                            <td>0002</td>
+                          </tr>
+          
+                        </tbody>
+                      </table>
+
+
+
+
+                  </div>
+
+                  <div class="tab-pane fade" id="v-stylist">
+                    <div>
+                        <div>
+                            <ul class="nav nav-pills mb-3 align-items-center" id="pills-tab">
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#reservation" type="button">所有預約(8)</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#stylist-list" type="button">所有造型師(3)</button>
+                                </li>
+
+                                <li class="ms-auto">
+                                    <!-- Button trigger modal -->
+                                <a class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#addStylist0001">
+                                    新增造型師</a>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="addStylist0001">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header border-0">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row row-cols-2">
+                                                    <div class="col">
+                                                        <img width="200" height="300" src="https://fakeimg.pl/200x300/" alt="...">
+                                                    </div>
+                                                    <div class="col">
+                                                        <div>
+                                                            <label for="stylistName" class="form-label"></label>
+                                                            <input type="text" class="form-control" id="stylistName" placeholder="姓名">
+                                                        </div>
+                                                        <div>
+                                                            <label for="stylistTitle" class="form-label"></label>
+                                                            <input type="text" class="form-control" id="stylistTitle" placeholder="副標題">
+                                                        </div>
+                                                        <div>
+                                                            <label for="stylistIntro" class="form-label"></label>
+                                                            <textarea class="form-control" id="stylistIntro" rows="3"></textarea>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <div class="border">
+                                                                <span class="badge bg-info text-dark">x 大膽創新</span>
+                                                                <span class="badge bg-info text-dark">x 國際獎項</span>
+                                                            </div>
+                                                            <div>
+                                                                <label for="addStylistBadge" class="form-label"></label>
+                                                                <input type="text" class="form-control" id="addStylistBadge">
+                                                                <div class="text-end">
+                                                                    <button type="submit" class="btn-primary btn-sm btn">新增標籤</button>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer border-0">
+                                                <button type="button" class="btn btn-primary">完成</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </li>
+         
+                              </ul>
+                              <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="reservation">
+                                    <table class="table text-center">
+                                        <thead>
+                                          <tr class="">
+                                            <th scope="col">姓名</th>
+                                            <th scope="col">電話</th>
+                                            <th scope="col">設計師</th>
+                                            <th scope="col">信箱</th>
+                                            <th scope="col">日期</th>
+                                            <th scope="col">狀態</th>
+            
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr class="align-middle">
+                                            <td>王大哥</td>
+                                            <td>0911-011-111</td>
+                                            <td>Daniel</td>
+                                            <td>wang@gmail.com</td>
+                                            <td>2/4/2024<br>10:00</td>
+                                            <td>
+                                                <select class="form-select form-select-sm">
+                                                <option selected>未安排</option>
+                                                <option value="1">已取消</option>
+                                                <option value="2">已完成</option>
+                                                <option value="3">已安排</option>
+                                                </select>
+                                                <div class="text-end">
+                                                    <small><a class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#note">
+                                                        查看備註
+                                                    </a></small>                                                    
+                                                    <div class="modal fade" id="note">
+                                                        <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header border-0">
+                                                            <h5 class="modal-title" id="exampleModalLabel">備註內容</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <p class="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit vitae cupiditate ea est quia ex quas harum magnam voluptatum ipsa! Quasi officiis modi quas similique quam nulla magnam a saepe.</p>
+                                                            </div>
+                                                            <div class="modal-footer border-0">
+                                                                <button type="button" class="btn btn-primary">確定</button>
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Button trigger modal -->
+                                                    <small><a class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#deleteNote">
+                                                        刪除
+                                                    </a></small>
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="deleteNote">
+                                                        <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header border-0">
+                                                            <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-exclamation-triangle"></i></h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                            <p class="text-center">是否確定刪除此預約？</p>
+                                                            </div>
+                                                            <div class="modal-footer border-0">
+                                                                <button type="button" class="btn btn-primary">確定</button>
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                            
+                                          </tr>
+                           
+                                        </tbody>
+                                      </table>
+
+
+
+
+                                </div>
+                                <div class="tab-pane fade" id="stylist-list">
+                                    <ul>
+                                        <li class="d-flex justify-content-between border rounded-3">
+                                            <div class="d-flex align-items-center">
+                                                <img width="50" height="50" src="https://fakeimg.pl/50x50/" alt="...">
+                                                <p>造型師：Brian</p>
+                                            </div>
+                                            <div>
+                                                <div class="modal fade" id="checkStylist0001">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header border-0">
+                                                          <h5 class="modal-title" id="exampleModalToggleLabel">Brian</h5>
+                                                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row row-cols-2">
+                                                                <div class="col">
+                                                                    <img width="200" height="300" src="https://fakeimg.pl/200x300/" alt="...">
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="d-flex align-items-end">
+                                                                        <h2>Brian</h2> 
+                                                                        <small>造型總監</small>
+                                                                    </div>
+                                                                    <div>
+                                                                        <span class="badge bg-info text-dark">大膽創新</span>
+                                                                        <span class="badge bg-info text-dark">國際獎項</span>
+                                                                        <span class="badge bg-info text-dark">前衛</span>
+                                                                    </div>
+                                                                    <p>
+                                                                        以大膽創新的設計理念而聞名,擁有超過20年的時尚造型經驗。曾經獲得多個國際設計獎項,包括「2023年度造型師獎」。擅長將前衛的設計元素融入實穿的服裝中,他的作品經常被時尚界的權威刊物所推崇。
+                                                                    </p>
+                                                                </div>
+                                                            </div>                                        
+                                                        </div>
+                                                        <div class="modal-footer border-0">
+                                                          <button class="btn btn-primary" data-bs-target="#editStylist0001" data-bs-toggle="modal">編輯</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="modal fade" id="editStylist0001">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header border-0">
+                
+                                                          <h5 class="modal-title"><a data-bs-toggle="modal" href="#checkStylist0001"><i class="bi bi-box-arrow-left"></i></a>
+                                                            編輯造型師</h5>
+                                                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row row-cols-2">
+                                                                <div class="col">
+                                                                    <img width="200" height="300" src="https://fakeimg.pl/200x300/" alt="...">
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div>
+                                                                        <label for="stylistName" class="form-label"></label>
+                                                                        <input type="text" class="form-control" id="stylistName" placeholder="姓名">
+                                                                      </div>
+                                                                      <div>
+                                                                        <label for="stylistTitle" class="form-label"></label>
+                                                                        <input type="text" class="form-control" id="stylistTitle" placeholder="副標題">
+                                                                      </div>
+                                                                      <div>
+                                                                        <label for="stylistIntro" class="form-label"></label>
+                                                                        <textarea class="form-control" id="stylistIntro" rows="3"></textarea>
+                                                                      </div>
+                                                                      <div class="d-flex">
+                                                                        <div class="border">
+                                                                            <span class="badge bg-info text-dark">x 大膽創新</span>
+                                                                            <span class="badge bg-info text-dark">x 國際獎項</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <label for="addStylistBadge" class="form-label"></label>
+                                                                            <input type="text" class="form-control" id="addStylistBadge">
+                                                                            <div class="text-end">
+                                                                                <button type="submit" class="btn-primary btn-sm btn">新增標籤</button>
+                                                                            </div>
+                                                                        </div>
+                
+                                                                      </div>
+                                                                </div>
+                
+                                                            </div>
+                
+                
+                                                        </div>
+                                                        <div class="modal-footer border-0">
+                                                          <button class="btn btn-primary" type="button">完成</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  <small><a data-bs-toggle="modal" href="#checkStylist0001">查看</a></small>
+                                 
+                
+                                                <!-- Button trigger modal -->
+                                                <small class="d-block"><a class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#deleteStylist0001">
+                                                    刪除
+                                                </a></small>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="deleteStylist0001">
+                                                    <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header border-0">
+                                                        <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-exclamation-triangle"></i></h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                        <p class="text-center">是否確定刪除此造型師？</p>
+                                                        </div>
+                                                        <div class="modal-footer border-0">
+                                                            <button type="button" class="btn btn-primary">確定</button>
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="d-flex justify-content-between border rounded-3">
+                                            <div class="d-flex align-items-center">
+                                                <img width="50" height="50" src="https://fakeimg.pl/50x50/" alt="...">
+                                                <p>造型師：Brian</p>
+                                            </div>
+                                            <div>
+                                                <div class="modal fade" id="checkStylist0002">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header border-0">
+                                                          <h5 class="modal-title" id="exampleModalToggleLabel">Brian</h5>
+                                                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row row-cols-2">
+                                                                <div class="col">
+                                                                    <img width="200" height="300" src="https://fakeimg.pl/200x300/" alt="...">
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="d-flex align-items-end">
+                                                                        <h2>Brian</h2> 
+                                                                        <small>造型總監</small>
+                                                                    </div>
+                                                                    <div>
+                                                                        <span class="badge bg-info text-dark">大膽創新</span>
+                                                                        <span class="badge bg-info text-dark">國際獎項</span>
+                                                                        <span class="badge bg-info text-dark">前衛</span>
+                                                                    </div>
+                                                                    <p>
+                                                                        以大膽創新的設計理念而聞名,擁有超過20年的時尚造型經驗。曾經獲得多個國際設計獎項,包括「2023年度造型師獎」。擅長將前衛的設計元素融入實穿的服裝中,他的作品經常被時尚界的權威刊物所推崇。
+                                                                    </p>
+                                                                </div>
+                                                            </div>                                        
+                                                        </div>
+                                                        <div class="modal-footer border-0">
+                                                          <button class="btn btn-primary" data-bs-target="#editStylist0002" data-bs-toggle="modal">編輯</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="modal fade" id="editStylist0002">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header border-0">
+                
+                                                          <h5 class="modal-title"><a data-bs-toggle="modal" href="#checkStylist0002"><i class="bi bi-box-arrow-left"></i></a>
+                                                            編輯造型師</h5>
+                                                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row row-cols-2">
+                                                                <div class="col">
+                                                                    <img width="200" height="300" src="https://fakeimg.pl/200x300/" alt="...">
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div>
+                                                                        <label for="stylistName" class="form-label"></label>
+                                                                        <input type="text" class="form-control" id="stylistName" placeholder="姓名">
+                                                                      </div>
+                                                                      <div>
+                                                                        <label for="stylistTitle" class="form-label"></label>
+                                                                        <input type="text" class="form-control" id="stylistTitle" placeholder="副標題">
+                                                                      </div>
+                                                                      <div>
+                                                                        <label for="stylistIntro" class="form-label"></label>
+                                                                        <textarea class="form-control" id="stylistIntro" rows="3"></textarea>
+                                                                      </div>
+                                                                      <div class="d-flex">
+                                                                        <div class="border">
+                                                                            <span class="badge bg-info text-dark">x 大膽創新</span>
+                                                                            <span class="badge bg-info text-dark">x 國際獎項</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <label for="addStylistBadge" class="form-label"></label>
+                                                                            <input type="text" class="form-control" id="addStylistBadge">
+                                                                            <div class="text-end">
+                                                                                <button type="submit" class="btn-primary btn-sm btn">新增標籤</button>
+                                                                            </div>
+                                                                        </div>
+                
+                                                                      </div>
+                                                                </div>
+                
+                                                            </div>
+                
+                
+                                                        </div>
+                                                        <div class="modal-footer border-0">
+                                                          <button class="btn btn-primary" type="button">完成</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  <small><a data-bs-toggle="modal" href="#checkStylist0002">查看</a></small>
+                                 
+                
+                                                <!-- Button trigger modal -->
+                                                <small class="d-block"><a class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#deleteStylist0002">
+                                                    刪除
+                                                </a></small>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="deleteStylist0002">
+                                                    <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header border-0">
+                                                        <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-exclamation-triangle"></i></h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                        <p class="text-center">是否確定刪除此造型師？</p>
+                                                        </div>
+                                                        <div class="modal-footer border-0">
+                                                            <button type="button" class="btn btn-primary">確定</button>
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                    </ul>
+
+                                </div>
+                              </div>
+                
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                  </div>
+
+                  <div class="tab-pane fade" id="v-members">
+
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">使用者名稱</th>
+                            <th scope="col">聯絡電話</th>
+                            <th scope="col">累積金額</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="align-middle">
+                            <td scope="row">
+                                <!-- Button trigger modal -->
+                                <small class="d-block"><a href="#" class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#checkMember0001">
+                                    查看
+                                </a></small>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="checkMember0001">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header border-0">
+                                            <h5 class="modal-title" id="exampleModalLabel">使用者詳細資訊</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="modal-body">
+                                                    <p>使用者姓名：王小明</span></p>
+                                                    <p>聯絡電話：09xx-xxx-xxx</p>
+                                                    <p>地址：xx市 xxx路 x樓</p>
+                                                    <p>電子郵件：example@gmail.com</p>
+                                                    <p>累計金額：5600$</p>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer border-0">
+                                            <a href="edit-member.html" type="button" class="btn btn-primary">編輯</a>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <!-- Button trigger modal -->
+                                <small class="d-block"><a class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#deleteMember0001">
+                                    刪除
+                                </a></small>
+                                <!-- Modal -->
+                                <div class="modal fade" id="deleteMember0001">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header border-0">
+                                        <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-exclamation-triangle"></i></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        <p class="text-center">是否確定刪除此會員？</p>
+                                        </div>
+                                        <div class="modal-footer border-0">
+                                            <button type="button" class="btn btn-primary">確定</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>王小明</td>
+                            <td>09-xx-xxx-xxx</td>
+                            <td>5600$</td>
+
+                          </tr>
+                          <tr class="align-middle">
+                            <td scope="row">
+                                <!-- Button trigger modal -->
+                                <small class="d-block"><a href="#" class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#checkMember0002">
+                                    查看
+                                </a></small>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="checkMember0002">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header border-0">
+                                            <h5 class="modal-title" id="exampleModalLabel">使用者詳細資訊</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="modal-body">
+                                                    <p>使用者姓名：吳宗憲</span></p>
+                                                    <p>聯絡電話：09xx-xxx-xxx</p>
+                                                    <p>地址：xx市 xxx路 x樓</p>
+                                                    <p>電子郵件：example@gmail.com</p>
+                                                    <p>累計金額：300$</p>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer border-0">
+                                            <a href="edit-member.html" type="button" class="btn btn-primary">編輯</a>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <!-- Button trigger modal -->
+                                <small class="d-block"><a class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#deleteMember0002">
+                                    刪除
+                                </a></small>
+                                <!-- Modal -->
+                                <div class="modal fade" id="deleteMember0002">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header border-0">
+                                        <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-exclamation-triangle"></i></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        <p class="text-center">是否確定刪除此會員？</p>
+                                        </div>
+                                        <div class="modal-footer border-0">
+                                            <button type="button" class="btn btn-primary">確定</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>吳宗憲</td>
+                            <td>09-xx-xxx-xxx</td>
+                            <td>600$</td>
+
+                          </tr>
+           
+                        </tbody>
+                      </table>
+                  </div>
 
                 </div>
             </div>
-          </div>
+        </div>
     
     </div>
 
