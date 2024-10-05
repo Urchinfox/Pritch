@@ -1,5 +1,6 @@
 .sytlistProfile {
   margin-top: 80px;
+  margin-bottom: 180px;
 }
 .stylist_info {
   font-size: 14px;
@@ -21,7 +22,6 @@
   margin-bottom: 120px;
 }
 .stylist_review {
-  font-family: "Noto Sans TC";
   img {
     max-width: 48px;
     max-height: 48px;
@@ -31,5 +31,10 @@
   }
   time {
     font-size: 14px;
+  }
+  li {
+    font-family: "Noto Sans TC";
+    border: 1px solid #212121;
+    padding: 24px 24px 81px 24px;
   }
 }
