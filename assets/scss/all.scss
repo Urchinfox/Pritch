@@ -1,13 +1,14 @@
 @import "../../node_modules/bootstrap/scss/functions";
-@import './utils/variables';
+@import "./utils/variables";
 @import "../../node_modules/bootstrap";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 
-@import './utils/utilities';
-@import './layout/header.scss';
-@import './layout/footer.scss';
+@import "./utils/utilities";
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
 
-@import './pages/index.scss';
-@import './pages/profile';
-@import './pages/createCategory';
+@import "./pages/index.scss";
+@import "./pages/profile";
+@import "./pages/createCategory";
+@import "./pages/stylistProfile";
