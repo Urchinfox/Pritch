@@ -1,0 +1,35 @@
+.sytlistProfile {
+  margin-top: 80px;
+}
+.stylist_info {
+  font-size: 14px;
+  margin-bottom: 120px;
+  h1 {
+    font-family: "Noto Sans TC";
+    span {
+      font-size: 14px;
+    }
+  }
+  li {
+    background-color: $gray-200;
+  }
+}
+.stylist_info_photo img {
+  width: 100%;
+}
+.stylist_project {
+  margin-bottom: 120px;
+}
+.stylist_review {
+  font-family: "Noto Sans TC";
+  img {
+    max-width: 48px;
+    max-height: 48px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+  time {
+    font-size: 14px;
+  }
+}
