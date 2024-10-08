@@ -9,71 +9,74 @@
     <%- include('./layout/header'); -%>
 
     <section class="login">
-        <div class="container">
+        <div class="container my-12">
                 <div class="row justify-content-center">
                     <div class="col-6">
-                        <form class="row border">
-                            <h2 class="col-12 text-center">MY PRITCH ACCOUNT</h2>
-                            <div class="col-md-12">
-                            <label for="usarName" class="form-label"></label>
-                            <input type="text" class="form-control" id="usarName" required placeholder="使用者名稱 *">
-                            </div>
-                            <div class="col-md-12">
-                                <label for="inputEmail4" class="form-label"></label>
-                                <input type="email" class="form-control" id="inputEmail4" required placeholder="Email *">
-                            </div>
-                            <div class="col-md-12">
-                            <label for="inputPassword4" class="form-label"></label>
-                            <input type="password" class="form-control" id="inputPassword4" required placeholder="Password *">
-                            </div>
-                            <div class="col-12">
-                            <label for="tel" class="form-label"></label>
-                            <input type="tel" class="form-control" id="tel" placeholder="電話 *" required>
-                            </div>
-                            <div class="col-12 d-flex justify-content-between">
-                                <div>
-                                    <label for="City" class="form-label"></label>
-                                    <select id="City" class="form-select" required>
-                                    <option selected>城市...</option>
-                                    <option>台北市</option>
-                                    <option>桃園市</option>
-                                    <option>新竹市</option>
-                                    <option>苗栗市</option>
-                                    <option>高雄市</option>
-                                    </select>
+                        <div class="border py-11 px-5 rounded-5 border-primary">
+                            <form class="row">
+                                <h2 class="col-12 text-center">MY PRITCH ACCOUNT</h2>
+                                <div class="col-md-12">
+                                <label for="usarName" class="form-label"></label>
+                                <input type="text" class="outline-0 form-control" id="usarName" required placeholder="使用者名稱 *">
                                 </div>
-                                <div>
-                                    <label for="Religion" class="form-label"></label>
-                                    <select id="Religion" class="form-select" required>
-                                    <option selected>地區...</option>
-                                    <option>永和區</option>
-                                    </select>
+                                <div class="col-md-12">
+                                    <label for="inputEmail4" class="form-label"></label>
+                                    <input type="email" class="outline-0 form-control" id="inputEmail4" required placeholder="Email *">
                                 </div>
-                                <div>
-                                    <label for="inputZip" class="form-label"></label>
-                                    <input type="text" class="form-control" id="inputZip" placeholder="郵寄區號 *" required>
+                                <div class="col-md-12">
+                                <label for="inputPassword4" class="form-label"></label>
+                                <input type="password" class="outline-0 form-control" id="inputPassword4" required placeholder="Password *">
                                 </div>
-                            </div>
-                            <div class="col-12">
-                            <label for="inputAddress" class="form-label"></label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="街道名稱 *">
-                            </div>
-            
-                            <div class="col-12">
-                            <button type="submit" class="w-100 btn btn-primary">註冊</button>
-                            </div>
-
-                            <div class="col text-center">
-                                <p>
-                                    <small>使用您的電子郵件地址註冊 <br>已經是會員？使用您的電子郵件和密碼登錄</small>
-                                </p>
-                                <p><small>or</small></p>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="w-100 btn btn-primary">使用google帳號登入</button>
-                                <button type="submit" class="w-100 btn btn-primary">使用Facebook帳號登入</button>
-                            </div>
-                        </form>
+                                <div class="col-12">
+                                <label for="tel" class="form-label"></label>
+                                <input type="tel" class="outline-0 form-control" id="tel" placeholder="電話 *" required>
+                                </div>
+                                <div class="col-12 d-flex justify-content-around">
+                                    <div>
+                                        <label for="City" class="form-label"></label>
+                                        <select id="City" class="w-auto form-select" required>
+                                        <option selected>城市...</option>
+                                        <option>台北市</option>
+                                        <option>桃園市</option>
+                                        <option>新竹市</option>
+                                        <option>苗栗市</option>
+                                        <option>高雄市</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="Religion" class="form-label"></label>
+                                        <select id="Religion" class="form-select w-auto" required>
+                                        <option selected>地區...</option>
+                                        <option>永和區</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="inputZip" class="form-label"></label>
+                                        <input type="text" class="outline-0 form-control" id="inputZip" placeholder="郵寄區號 *" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                <label for="inputAddress" class="form-label"></label>
+                                <input type="text" class="outline-0 form-control" id="inputAddress" placeholder="街道名稱 *">
+                                </div>
+                
+                                <div class="col-12 mt-5">
+                                    <button type="submit" class="w-100 btn btn-primary">註冊</button>
+                                </div>
+    
+                                <div class="col text-center my-8">
+                                    <p>
+                                        <small>使用您的電子郵件地址註冊 </small><br>
+                                        <small><a href="login.html">已經是會員？<u>使用您的電子郵件和密碼登錄</a></u></small>
+                                    </p>
+                                    <p><small>or</small></p>
+                                </div>
+                                <div class="col-12">
+                                    <button type="#" class="mb-6 w-100 btn btn-primary">使用google帳號登入</button>
+                                    <button type="#" class="w-100 btn btn-primary">使用Facebook帳號登入</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
         </div>

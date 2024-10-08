@@ -8,34 +8,38 @@
 <body>
     <%- include('./layout/header'); -%>
     <section class="login">
-        <div class="container">
+        <div class="container my-12">
                 <div class="row justify-content-center">
                     <div class="col-6">
-                        <form class="row border">
-                            <h2 class="col-12 text-center">MY PRITCH ACCOUNT</h2>
-                            <div class="col-md-12">
-                                <label for="inputEmail4" class="form-label"></label>
-                                <input type="email" class="form-control" id="inputEmail4" required placeholder="Email *">
-                            </div>
-                            <div class="col-md-12">
-                            <label for="inputPassword4" class="form-label"></label>
-                            <input type="password" class="form-control" id="inputPassword4" required placeholder="Password *">
-                            </div>
-                            <div class="col-12">
-                            <button type="submit" class="w-100 btn btn-primary">登入</button>
-                            </div>
-
-                            <div class="col text-center">
-                                <p>
-                                    <small>使用您的電子郵件地址註冊 <br>已經是會員？使用您的電子郵件和密碼登錄</small>
-                                </p>
-                                <p><small>or</small></p>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="w-100 btn btn-primary">使用google帳號登入</button>
-                                <button type="submit" class="w-100 btn btn-primary">使用Facebook帳號登入</button>
-                            </div>
-                        </form>
+                        <div class="border rounded-5 px-5 py-12 border-primary">
+                            <form class="row">
+                                <h2 class="col-12 text-center">MY PRITCH ACCOUNT</h2>
+                                <div class="col-md-12">
+                                    <label for="inputEmail4" class="form-label"></label>
+                                    <input type="email" class="outline-0 form-control" id="inputEmail4" required placeholder="Email *">
+                                </div>
+                                <div class="col-md-12">
+                                <label for="inputPassword4" class="form-label"></label>
+                                <input type="password" class="outline-0 form-control" id="inputPassword4" required placeholder="Password *">
+                                </div>
+                                <div class="col-12 mt-6">
+                                <button type="submit" class="w-100 btn btn-primary">登入</button>
+                                </div>
+    
+                                <div class="col-12 text-center my-8">
+                                    <p>
+                                        <small><a href="reset-password.html"><u>忘記密碼？</u></a> </small>
+                                        <br>
+                                        <small>還沒註冊嗎？<a href="sign-up.html" class="decoration"><u>使用您的電子郵件註冊</u></a></small>
+                                    </p>
+                                    <p><small>or</small></p>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="mb-6 w-100 btn btn-primary">使用google帳號登入</button>
+                                    <button type="button" class="w-100 btn btn-primary">使用Facebook帳號登入</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
         </div>
