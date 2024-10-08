@@ -832,7 +832,7 @@ $input-btn-line-height:       $line-height-base !default;
 
 $input-btn-focus-width:         $focus-ring-width !default;
 $input-btn-focus-color-opacity: $focus-ring-opacity !default;
-$input-btn-focus-color:         $focus-ring-color !default;
+$input-btn-focus-color:         none; //$focus-ring-color !default; daniel-input-focus-color
 $input-btn-focus-blur:          $focus-ring-blur !default;
 $input-btn-focus-box-shadow:    $focus-ring-box-shadow !default;
 
