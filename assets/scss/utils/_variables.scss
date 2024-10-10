@@ -441,7 +441,7 @@ $spacers: (
   // 2: $spacer * .5,
   // 3: $spacer,
   // 4: $spacer * 1.5,
-  // 5: $spacer * 3,,,
+  // 5: $spacer * 3,,,,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -839,7 +839,7 @@ $input-btn-line-height: $line-height-base !default;
 
 $input-btn-focus-width: $focus-ring-width !default;
 $input-btn-focus-color-opacity: $focus-ring-opacity !default;
-$input-btn-focus-color: $focus-ring-color !default;
+$input-btn-focus-color: none; //$focus-ring-color !default; daniel-input-focus-color
 $input-btn-focus-blur: $focus-ring-blur !default;
 $input-btn-focus-box-shadow: $focus-ring-box-shadow !default;
 
