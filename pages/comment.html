@@ -10,24 +10,23 @@
     <div class="container my-12">
 
         <div class="row align-items-start">
-            <div class="col-4">
+            <div class="col-lg-4 mb-6 mb-lg-0">
                 <div class="nav profile-control flex-column nav-pills me-3" id="v-pills-tab">
                     <button disabled class="text-start nav-link" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-personal-info" type="button">會員資料</button>
                     <button disabled class="text-start nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-order" type="button">訂單查詢</button>
                     <button class="text-start nav-link active" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-order-history" type="button" >歷史訂單</button>
                     <button disabled class="text-start nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-reset-password" type="button" >重設密碼</button>
-                    <button class="mt-auto btn btn-outline-primary" type="button" >登出</button>
-
+                    <button class="text-center nav-link d-none d-lg-block" type="button" >登出</button>
                 </div>
             </div>
-            <div class="col-8">
+            <div class="col-lg-8">
                 <div class="tab-content" id="v-pills-tabContent">
                   <div class="tab-pane fade border" id="v-personal-info">                
                   </div>
 
                   </div>
                   <div class="tab-pane show active fade" id="v-order-history">
-                    <a href="profile.html" type="button"><i class="bi bi-box-arrow-left fs-6"></i></a>
+                    <a href="profile.html#v-order-history" type="button"><i class="bi bi-box-arrow-left fs-6"></i></a>
                     <div class="d-flex justify-content-between">
                         <p>訂單編號:xxx</p>
                         <time datetime="" >日期:07/08/2024</time>
@@ -47,7 +46,7 @@
                             <div class="active">已送達</div>
                         </div>
 
-                        <div class="d-flex justify-content-around">
+                        <div class="d-lg-flex d-block justify-content-around">
                             <div class="me-6">
                                 <p>產品名稱: xx黑色洋裝 * 1</p>
                                 <img class="mb-1" src="https://fakeimg.pl/200x200/">
@@ -60,12 +59,12 @@
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <div class="form-floating">
+                                <div class="form-floating mb-5 mb-lg-0">
                                     <textarea class="outline-0 form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                                     <label for="floatingTextarea2">歡迎留下評論</label>
                                 </div>
                                 <div class="text-end mt-auto">
-                                    <button type="submit" class="btn btn-primary">送出</button>
+                                    <button type="submit" class="btn btn-sm btn-primary">送出</button>
                                 </div>
                             </div>
                         </div>
