@@ -1,13 +1,12 @@
-
-img{
-    max-width: 100%;
-    vertical-align: middle;
-    height: auto;
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
 }
 
-a{
-    color: inherit;
-    display: inline-block;
+a {
+  color: inherit;
+  display: inline-block;
 }
 
 
@@ -24,9 +23,8 @@ $utilities: map-merge(
   )
 );
 
-@mixin mobile{
-    @media (max-width:992px){
-      @content;
-    }
+@mixin mobile {
+  @media (max-width: 992px) {
+    @content;
+  }
 }
-
