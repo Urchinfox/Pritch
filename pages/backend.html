@@ -9,8 +9,8 @@
     <%- include('./layout/header'); -%>
     <div class="container">
         <div class="row align-items-start">
-            <div class="col-4">
-                <div class="nav flex-column nav-pills me-3" id="v-pills-tab">
+            <div class="col-lg-4">
+                <div class="nav flex-column nav-pills profile-control me-3" id="v-pills-tab">
                   <button class="text-start nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-products" type="button">所有商品</button>
                   <button class="text-start nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-orders" type="button">所有訂單</button>
                   <button class="text-start nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-comments" type="button">查看評論</button>
@@ -19,39 +19,42 @@
                 </div>
             </div>
     
-            <div class="col-8">
+            <div class="col-lg-8">
                 <div class="tab-content" id="v-pills-tabContent">
                   <div class="tab-pane fade show active" id="v-products">
                     <div>
                         <form action="">
-                            <div class="d-flex justify-content-between">
+                            <div class="d-flex justify-content-between mb-5 align-items-center">
                                 <div>
-                                    <a href="createProduct.html" class="btn btn-primary">+新增商品</a>
-                                    <a href="addCategory.html" class="btn btn-primary">+新增分類</a>
-                                    <a href="addAttribute.html" class="btn btn-primary">+新增屬性</a>
+                                    <a href="createProduct.html" class="btn btn-primary btn-sm ">+新增商品</a>
+                                    <a href="addCategory.html" class="btn btn-primary btn-sm">+新增分類</a>
+                                    <a href="addAttribute.html" class="btn btn-primary btn-sm">+新增屬性</a>
                                 </div>
-                                <input class="ms-auto" type="search" placeholder="搜尋品項">
+                                <div>
+                                    <input class="outline-0 ms-auto" type="search" placeholder="搜尋品項">
+                                    <button type="button" class="btn btn-sm btn-secondary">搜尋</button>
+                                </div>
                             </div>
-                            <div class="d-flex">
-                                <select class="form-select form-select-sm">
+                            <div class="d-flex justify-content-around">
+                                <select class="form-select form-select-sm w-auto">
                                     <option selected>主分類</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>
                                 </select>
-                                <select class="form-select form-select-sm">
+                                <select class="form-select form-select-sm w-auto">
                                     <option selected>次分類</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>
                                 </select>
-                                  <select class="form-select form-select-sm">
+                                  <select class="form-select form-select-sm w-auto">
                                     <option selected>次分類</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>
                                   </select>
-                                <select class="form-select form-select-sm">
+                                <select class="form-select form-select-sm w-auto">
                                     <option selected>次分類</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
@@ -148,9 +151,8 @@
                   <div class="tab-pane fade" id="v-orders" >
                         <div>
                             <form action="">
-                                <div class="d-flex justify-content-between">
+                                <div class="">
                                     <!-- Button trigger modal -->
-                                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#statistic">銷售統計</button>
                                         <!-- Modal -->
                                         <div class="modal fade" id="statistic">
                                             <div class="modal-dialog">
@@ -262,9 +264,7 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
-                                    <div class="d-flex">
+                                    <div class="d-lg-flex d-block justify-content-around align-items-center">
                                         <div>
                                             <select class="form-select form-select-sm">
                                                 <option selected>2024</option>
@@ -273,7 +273,7 @@
                                               </select>
                                         </div>
                                         <div>
-                                            <select class="form-select form-select-sm">
+                                            <select class="form-select form-select-sm ">
                                               <option value="Mon" selected>選擇月份</option>
                                               <option value="1">Jan</option>
                                               <option value="2">Feb</option>
@@ -290,7 +290,7 @@
                                             </select>
                                         </div>
                                         <div>
-                                            <select class="form-select form-select-sm">
+                                            <select class="form-select form-select-sm ">
                                               <option selected>選擇日期</option>
                                               <option value="1">1</option>
                                               <option value="2">2</option>
@@ -298,9 +298,12 @@
                                             </select>
                                         </div>
                                         <div>
-                                            <input class="" type="search" placeholder="搜尋品項">
-                                            <button type="button" class="btn btn-primary">搜尋</button>
+                                            <input class="outline-0 w-100" type="search" placeholder="搜尋品項">
                                         </div>
+                                    </div>
+                                    <div class="text-end mt-4">
+                                        <button type="button" class="btn btn-primary btn-sm">搜尋</button>
+                                        <button class="btn btn-primary btn-sm " type="button" data-bs-toggle="modal" data-bs-target="#statistic">銷售統計</button>
                                     </div>
                                 </div>
                             </form>
@@ -497,8 +500,8 @@
 
                                 <li class="ms-auto">
                                     <!-- Button trigger modal -->
-                                <a class="text-decoration" type="button" data-bs-toggle="modal" data-bs-target="#addStylist0001">
-                                    新增造型師</a>
+                                    <a class="d-block" type="button" data-bs-toggle="modal" data-bs-target="#addStylist0001">
+                                        <u>新增造型師</u></a>
                                     <!-- Modal -->
                                     <div class="modal fade" id="addStylist0001">
                                         <div class="modal-dialog">
@@ -513,36 +516,35 @@
                                                     </div>
                                                     <div class="col">
                                                         <div>
-                                                            <label for="stylistName" class="form-label"></label>
-                                                            <input type="text" class="form-control" id="stylistName" placeholder="姓名">
-                                                        </div>
-                                                        <div>
-                                                            <label for="stylistTitle" class="form-label"></label>
-                                                            <input type="text" class="form-control" id="stylistTitle" placeholder="副標題">
-                                                        </div>
-                                                        <div>
-                                                            <label for="stylistIntro" class="form-label"></label>
-                                                            <textarea class="form-control" id="stylistIntro" rows="3"></textarea>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <div class="border">
-                                                                <span class="badge bg-info text-dark">x 大膽創新</span>
-                                                                <span class="badge bg-info text-dark">x 國際獎項</span>
+                                                            <div>
+                                                                <input type="text" class="form-control" id="stylistName" placeholder="姓名">
                                                             </div>
                                                             <div>
-                                                                <label for="addStylistBadge" class="form-label"></label>
-                                                                <input type="text" class="form-control" id="addStylistBadge">
-                                                                <div class="text-end">
-                                                                    <button type="submit" class="btn-primary btn-sm btn">新增標籤</button>
+                                                                <label for="stylistTitle" class="form-label"></label>
+                                                                <input type="text" class="form-control" id="stylistTitle" placeholder="副標題">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="stylistIntro" class="form-label"></label>
+                                                                <textarea class="form-control" id="stylistIntro" rows="3"></textarea>
+                                                            </div>
+                                                          <div class="d-flex mb-3">
+                                                                <div>
+                                                                    <span class="badge bg-info text-dark">x 大膽創新</span>
+                                                                    <span class="badge bg-info text-dark">x 國際獎項</span>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="text" class="form-control" id="addStylistBadge">
                                                                 </div>
                                                             </div>
-
+                                                            <div class="text-end">
+                                                                <button type="submit" class="btn-primary btn-sm btn">新增標籤</button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="modal-footer border-0">
-                                                <button type="button" class="btn btn-primary">完成</button>
+                                                <button type="submit" class="btn btn-primary">完成</button>
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
                                             </div>
                                         </div>
@@ -635,11 +637,11 @@
 
 
                                 </div>
-                                <div class="tab-pane fade" id="stylist-list">
+                                <div class="tab-pane fade stylist-list" id="stylist-list">
                                     <ul>
-                                        <li class="d-flex justify-content-between border rounded-3">
+                                        <li class="d-flex justify-content-between">
                                             <div class="d-flex align-items-center">
-                                                <img width="50" height="50" src="https://fakeimg.pl/50x50/" alt="...">
+                                                <img class="me-3" width="50" height="50" src="https://fakeimg.pl/50x50/" alt="...">
                                                 <p>造型師：Brian</p>
                                             </div>
                                             <div>
@@ -657,10 +659,10 @@
                                                                 </div>
                                                                 <div class="col">
                                                                     <div class="d-flex align-items-end">
-                                                                        <h2>Brian</h2> 
+                                                                        <h2 class="me-3">Brian</h2> 
                                                                         <small>造型總監</small>
                                                                     </div>
-                                                                    <div>
+                                                                    <div class="mb-5">
                                                                         <span class="badge bg-info text-dark">大膽創新</span>
                                                                         <span class="badge bg-info text-dark">國際獎項</span>
                                                                         <span class="badge bg-info text-dark">前衛</span>
@@ -693,31 +695,31 @@
                                                                 </div>
                                                                 <div class="col">
                                                                     <div>
-                                                                        <label for="stylistName" class="form-label"></label>
-                                                                        <input type="text" class="form-control" id="stylistName" placeholder="姓名">
-                                                                      </div>
-                                                                      <div>
-                                                                        <label for="stylistTitle" class="form-label"></label>
-                                                                        <input type="text" class="form-control" id="stylistTitle" placeholder="副標題">
-                                                                      </div>
-                                                                      <div>
-                                                                        <label for="stylistIntro" class="form-label"></label>
-                                                                        <textarea class="form-control" id="stylistIntro" rows="3"></textarea>
-                                                                      </div>
-                                                                      <div class="d-flex">
-                                                                        <div class="border">
-                                                                            <span class="badge bg-info text-dark">x 大膽創新</span>
-                                                                            <span class="badge bg-info text-dark">x 國際獎項</span>
+                                                                        <div>
+                                                                            <label for="stylistName" class="form-label"></label>
+                                                                            <input type="text" class="form-control" id="stylistName" placeholder="姓名">
                                                                         </div>
                                                                         <div>
-                                                                            <label for="addStylistBadge" class="form-label"></label>
-                                                                            <input type="text" class="form-control" id="addStylistBadge">
-                                                                            <div class="text-end">
-                                                                                <button type="submit" class="btn-primary btn-sm btn">新增標籤</button>
+                                                                            <label for="stylistTitle" class="form-label"></label>
+                                                                            <input type="text" class="form-control" id="stylistTitle" placeholder="副標題">
+                                                                        </div>
+                                                                        <div class="mb-3">
+                                                                            <label for="stylistIntro" class="form-label"></label>
+                                                                            <textarea class="form-control" id="stylistIntro" rows="3"></textarea>
+                                                                        </div>
+                                                                      <div class="d-flex mb-3">
+                                                                            <div>
+                                                                                <span class="badge bg-info text-dark">x 大膽創新</span>
+                                                                                <span class="badge bg-info text-dark">x 國際獎項</span>
+                                                                            </div>
+                                                                            <div>
+                                                                                <input type="text" class="form-control" id="addStylistBadge">
                                                                             </div>
                                                                         </div>
-                
-                                                                      </div>
+                                                                        <div class="text-end">
+                                                                            <button type="submit" class="btn-primary btn-sm btn">新增標籤</button>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                 
                                                             </div>
@@ -725,12 +727,12 @@
                 
                                                         </div>
                                                         <div class="modal-footer border-0">
-                                                          <button class="btn btn-primary" type="button">完成</button>
+                                                          <button class="btn btn-sm btn-primary" type="submit">完成</button>
                                                         </div>
                                                       </div>
                                                     </div>
                                                   </div>
-                                                  <small><a data-bs-toggle="modal" href="#checkStylist0001">查看</a></small>
+                                                  <small><a data-bs-toggle="modal" href="#checkStylist0001"><u>查看</u></a></small>
                                  
                 
                                                 <!-- Button trigger modal -->
@@ -758,9 +760,9 @@
                                             </div>
                                         </li>
 
-                                        <li class="d-flex justify-content-between border rounded-3">
+                                        <li class="d-flex justify-content-between">
                                             <div class="d-flex align-items-center">
-                                                <img width="50" height="50" src="https://fakeimg.pl/50x50/" alt="...">
+                                                <img class="me-3" width="50" height="50" src="https://fakeimg.pl/50x50/" alt="...">
                                                 <p>造型師：Brian</p>
                                             </div>
                                             <div>
@@ -778,10 +780,10 @@
                                                                 </div>
                                                                 <div class="col">
                                                                     <div class="d-flex align-items-end">
-                                                                        <h2>Brian</h2> 
+                                                                        <h2 class="me-3">Brian</h2> 
                                                                         <small>造型總監</small>
                                                                     </div>
-                                                                    <div>
+                                                                    <div class="mb-5">
                                                                         <span class="badge bg-info text-dark">大膽創新</span>
                                                                         <span class="badge bg-info text-dark">國際獎項</span>
                                                                         <span class="badge bg-info text-dark">前衛</span>
@@ -814,31 +816,31 @@
                                                                 </div>
                                                                 <div class="col">
                                                                     <div>
-                                                                        <label for="stylistName" class="form-label"></label>
-                                                                        <input type="text" class="form-control" id="stylistName" placeholder="姓名">
-                                                                      </div>
-                                                                      <div>
-                                                                        <label for="stylistTitle" class="form-label"></label>
-                                                                        <input type="text" class="form-control" id="stylistTitle" placeholder="副標題">
-                                                                      </div>
-                                                                      <div>
-                                                                        <label for="stylistIntro" class="form-label"></label>
-                                                                        <textarea class="form-control" id="stylistIntro" rows="3"></textarea>
-                                                                      </div>
-                                                                      <div class="d-flex">
-                                                                        <div class="border">
-                                                                            <span class="badge bg-info text-dark">x 大膽創新</span>
-                                                                            <span class="badge bg-info text-dark">x 國際獎項</span>
+                                                                        <div>
+                                                                            <label for="stylistName" class="form-label"></label>
+                                                                            <input type="text" class="form-control" id="stylistName" placeholder="姓名">
                                                                         </div>
                                                                         <div>
-                                                                            <label for="addStylistBadge" class="form-label"></label>
-                                                                            <input type="text" class="form-control" id="addStylistBadge">
-                                                                            <div class="text-end">
-                                                                                <button type="submit" class="btn-primary btn-sm btn">新增標籤</button>
+                                                                            <label for="stylistTitle" class="form-label"></label>
+                                                                            <input type="text" class="form-control" id="stylistTitle" placeholder="副標題">
+                                                                        </div>
+                                                                        <div class="mb-3">
+                                                                            <label for="stylistIntro" class="form-label"></label>
+                                                                            <textarea class="form-control" id="stylistIntro" rows="3"></textarea>
+                                                                        </div>
+                                                                      <div class="d-flex mb-3">
+                                                                            <div>
+                                                                                <span class="badge bg-info text-dark">x 大膽創新</span>
+                                                                                <span class="badge bg-info text-dark">x 國際獎項</span>
+                                                                            </div>
+                                                                            <div>
+                                                                                <input type="text" class="form-control" id="addStylistBadge">
                                                                             </div>
                                                                         </div>
-                
-                                                                      </div>
+                                                                        <div class="text-end">
+                                                                            <button type="submit" class="btn-primary btn-sm btn">新增標籤</button>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                 
                                                             </div>
@@ -846,12 +848,12 @@
                 
                                                         </div>
                                                         <div class="modal-footer border-0">
-                                                          <button class="btn btn-primary" type="button">完成</button>
+                                                          <button class="btn btn-primary btn-sm" type="submit">完成</button>
                                                         </div>
                                                       </div>
                                                     </div>
                                                   </div>
-                                                  <small><a data-bs-toggle="modal" href="#checkStylist0002">查看</a></small>
+                                                  <small><a data-bs-toggle="modal" href="#checkStylist0002"><u>查看</u></a></small>
                                  
                 
                                                 <!-- Button trigger modal -->
