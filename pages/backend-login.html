@@ -6,21 +6,30 @@
     <title>backend-login</title>
 </head>
 <body>
+    <nav class="border-5 border-bottom mb-8 p-3 border-gray">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <p>PRITCH 後台管理系統</p>
+                <h1 class="fs-5">PRITCH</h1>
+                
+            </div>
+        </div>
+    </nav>
 
     <section class="login">
         <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-6">
-                        <form class="row border">
+                    <div class="col-lg-6">
+                        <form class="row">
                             <div class="col-md-12">
                                 <label for="inputAccount" class="form-label"></label>
-                                <input type="text" class="form-control" id="inputAccount" required placeholder="管理者帳號">
+                                <input type="text" class="form-control outline-0" id="inputAccount" required placeholder="管理者帳號">
                             </div>
                             <div class="col-md-12">
                                 <label for="inputPassword4" class="form-label"></label>
-                                <input type="password" class="form-control" id="inputPassword4" required placeholder="管理者密碼">
+                                <input type="password" class="form-control outline-0" id="inputPassword4" required placeholder="管理者密碼">
                             </div>
-                            <div class="col-12 text-center">
+                            <div class="col-12 text-center mt-6">
                                 <button type="submit" class="btn btn-primary">登入</button>
                             </div>
                         </form>
