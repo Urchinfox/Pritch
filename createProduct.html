@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create/Edit Products</title>
-  <script type="module" crossorigin src="/Pritch/assets/main-16f901e5.js"></script>
-  <link rel="stylesheet" href="/Pritch/assets/main-2f70d90c.css">
+  <script type="module" crossorigin src="/Pritch/assets/main-a600979c.js"></script>
+  <link rel="stylesheet" href="/Pritch/assets/main-fa5cbc61.css">
 </head>
 <body>
     <h1 class="header">我是 header</h1>
 <a href="index.html">index</a>
 <a href="about.html">about</a>
-<a href="contact.html">contact</a>    <div class="container">
+<a href="contact.html">contact</a>    <div class="container create-product">
         <div class="row">
             <div class="col-12">
                 <a href="backend.html">
                     <i class="fs-6 bi bi-box-arrow-left"></i>
                 </a>
             </div>
-            <div class="col-8">
+            <div class="col-lg-8 product-info order-1 order-lg-0">
                 <div class="form-floating mb-3 create-product-form">
-                    <div>
-                    <input type="email" class="form-control outline-0" id="productName" placeholder="產品名稱">
-                    <label for="productName">產品名稱</label>
+                    <div class="mb-3">
+                        <label for="productName">產品名稱</label>
+                        <input type="email" class="form-control outline-0" id="productName" placeholder="產品名稱">
                     </div>
                     <div class="form-floating">
-                    <textarea type="description" class="outline-0 form-control" id="floatingPassword" placeholder="產品說明" style="height: 100px;"></textarea>
-                    <label for="description">產品說明</label>
+                        <textarea type="description" class="outline-0 form-control" id="floatingPassword" placeholder="產品說明" style="height: 100px;"></textarea>
+                        <label for="description">產品說明</label>
                     </div>
                     <div class="mb-3">
                     <label for="sku" class="form-label">貨號</label>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 publish-status order-0 order-lg-1">
                 <div class="border border-gray mb-2 p-5">
                     <div class="d-flex">
                         <span>狀態：</span>
@@ -68,39 +68,40 @@
                             <a href="#">移至垃圾桶</a>
                         </div>
                         <div>
-                            <button type="button" class="btn btn-sm btn-secondary">發布</button>
+                            <button type="submit" class="btn btn-sm btn-secondary">發布</button>
                         </div>
                     </div>
                 </div>
-                <div class="text-end">
+                <div class="text-lg-end text-center">
                     <img width="300" height="300" src="https://fakeimg.pl/300x300/" alt="">
                     <small class="d-block"><a href="#">圖片上傳</a></small>
                 </div>
 
-                <div>
+                <div class="mb-lg-0 mb-7 ">
                     <label for="color"></label>
                     <select class="form-select form-select-sm" id="color">
                         <option selected>顏色</option>
                         <option value="1">黑色</option>
                         <option value="2">藍色</option>
                         <option value="3">白色</option>
-                        </select>
+                    </select>
                         <label for="size"></label>
-                        <select class="form-select form-select-sm" id="size">
+                    <select class="form-select form-select-sm" id="size">
                             <option selected>尺寸</option>
                             <option value="1">S</option>
                             <option value="2">M</option>
                             <option value="3">L</option>
                             <option value="4">XL</option>
                             <option value="5">XXL</option>
-                        </select>
+                    </select>
                         <label for="category"></label>
-                        <select class="form-select form-select-sm" id="category">
+                    <select class="form-select form-select-sm" id="category">
                             <option selected>分類</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
-                        </select>
+                    </select>
+                
                 </div>
 
                 
