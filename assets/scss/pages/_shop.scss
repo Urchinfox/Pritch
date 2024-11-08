@@ -1,0 +1,15 @@
+
+.shop-banner{
+    .banner{
+        max-width: 1920px;
+        height: 500px;
+        background-image: url("https://s3-alpha-sig.figma.com/img/9d69/1fd5/18f78353a161abf7064972807eae1d7b?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BC~Bc8ojdcev42x~ATYSANDVwI51UOoLifQWu8DlNHeM5WARY7CunfYeevTQy~eIBMAYBeSswNW~cWVW3Ny-rhAVfLShgU60Yb2L4cfbF9o-PG2EQsA2fpjJMmH~bn3PTBiOqOTkm9sB7z8Wu3FDucdRPMWetX2CM2DFwL1Wq7C6jIiD9NgTEJzsg4fp~-MOvE6ExNGK9bKzQzxgWO5yGc276mssfc2NtwRiUyLIlbSZAksB8Amux17XWVU2qgZH6JJdYwaxxr~K7mZFHyMVexmqVCMGUK8btsQG5EBdR386NjQE2y68o5GeCIBv~kuzPfYpvxDVwI8ysBLodajz2g__");
+        background-position: 0% 40%;
+        @include mobile{
+            background-position: 30% 40%;
+            height: 200px;
+    
+        }
+    }
+
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pritch Shop</title>
+</head>
+<body>
+    <%- include('./layout/header'); -%>
+    <section class="shop-banner mb-lg-13 mb-10">
+        <div class="banner mb-lg-12 mb-6"></div>
+        <div class="px-lg-7 px-3">
+            <h2 class="mb-lg-6 mb-4 fs-lg-1 fs-5">秋冬 24 女裝系列</h2>
+            <div class="fs-lg-6 fs-7">
+                <p>探索PRITCH最新24秋冬女裝系列，靈感源於義大利先鋒藝術家LaviniaFontana，致敬他勇於突破社會規範。</p>
+                <p>此系列宣揚獨立的價值，以及每人皆應該勇於做自己。</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="shop-product mb-lg-14 mb-11">
+        <div class="px-7 d-block d-lg-flex justify-content-between mb-6 mb-lg-0">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb fs-lg-7 fs-8">
+                  <li class="breadcrumb-item text-gray"><a href="index.html">首頁</a></li>
+                  <li class="breadcrumb-item text-gray"><a href="#">New In</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">秋冬24女裝系列</li>
+                </ol>
+            </nav>
+            <div class="text-end fs-lg-7 fs-8">
+                <button class="border-0 bg-transparent"><i class="bi bi-sort-down me-1"></i>排列</button>
+                <button class="border-0 bg-transparent"><i class="bi bi-funnel-fill me-1"></i>篩選</button>
+            </div>
+        </div>
+        <div class="container-fluid ">
+            <div class="row row-cols-lg-5 row-cols-2 gy-lg-12 gy-10 gx-lg-1 gx-0 mb-lg-10 mb-6" id="shopProductCard"></div>
+            <nav>
+                <ul class=" d-flex justify-content-center list-unstyled">
+                  <li><a class="px-2" href="#">1</a></li>
+                  <li><a class="px-2" href="#">2</a></li>
+                  <li><a class="px-2" href="#">3</a></li>
+                  <li><a class="px-2" href="#">4</a></li>
+                  <li><a class="px-2" href="#">5</a></li>
+                  <li class="px-2">...</li>
+                  <li><a class="px-2" href="#">10</a></li>
+                  <li><a class="px-2 fs-8" href="#"><i class="bi bi-chevron-right"></i>
+                  </a></li>
+                </ul>
+              </nav>
+        </div>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+
+</body>
+</html>

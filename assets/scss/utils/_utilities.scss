@@ -9,6 +9,10 @@ a {
   display: inline-block;
 }
 
+ul,ol{
+  margin-bottom: 0;
+}
+
 
 $utilities: map-merge(
   $utilities,
