@@ -10,24 +10,30 @@ const popularPictureArr = [
         name : '飛行員運動褲',
         price: 69656,
         description: '飛行運動褲 是一款 Nappa 皮革雕塑，其半閃亮的紅色表面成為身體曲線的畫布。這款單品採用引人注目的緊身胸衣細節和奢華的絲綢襯裡，既是一件盔甲，又是一種誘惑，專為那些以泰然自若和力量掌控空間的人士而設計。',
+        btnUrl:'#',
     },
     {
         imgUrl: 'https://s3-alpha-sig.figma.com/img/7579/abf7/ff64de5099a3c6c26cee9f7afe4016cb?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=US1KX0195yEBrd8lQgFgpuJ~~GDojoehj25bxKOmK5X11u~qJgewFLAxiEPlZuMOScDCd0HGUF1NGSJMyDuN2x2pNJxBxYR6OHdDlDWh7s2U2PAc~1R955aJu4r0CJqWGwklz15rAAUdExL6c5fTh9hvJ6dk~5omwvVDjGkyhFPiykEn64gHhdc1EON5LWJbDugEk1DbnoM0PQuyurUSR-F6ZDc1rmgZnOqElRrJvKSl1GIDHAaXSZ0L9TQ3cZeNpyRC1~ikcr1HH4gv9WvXN4mLVSJA-AjpDKrmKRPugulNcidNhw41Nony6ye4RpI4BvScxHOcIywsslI2izRGVA__',
         name : 'BIA 緊身胸衣',
         price: 32084,
         description: 'BIA 緊身胸衣 是一款 Nappa 皮革雕塑，其半閃亮的紅色表面成為身體曲線的畫布。這款單品採用引人注目的緊身胸衣細節和奢華的絲綢襯裡，既是一件盔甲，又是一種誘惑，專為那些以泰然自若和力量掌控空間的人士而設計。',
+        btnUrl:'#',
+
     },    
     {
         imgUrl: 'https://s3-alpha-sig.figma.com/img/5f03/c48f/ed639527cac5eaecd8005f03dc7d14a3?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hKTiaySWkSfwTbp-YPK4oi2Edya-AYjRDUAZGgp5JqkpgvWtpckQ3bYfvtJ4KLYUkhx7oIxk53WJ9LyceGK0gd5dvDFKDCiSQC4fjc4Og3kiJLSJT9~VHIbIjkMl8SMyM5ZzF4RgsbzA6ehyE4LNN7qxiMICdDn0dp15us8rYi64ZNeXQfkAFvu22I3fGdGbgCTgiETx1bRNYogWvV76QMebJmdeh0wgyQ-X0FeyjzXAOw~7pCwdqFLHfbFIBFHPLUqvDAP1fydZeRCks9-xyrQ7v8M-BAzszMwBtff2UBD9FPn24fdnJqdDrt-UZ-ofVr7wxhcT-bUCYo7Q1ZQi2Q__',
         name : '復古飾面緊身胸衣',
         price: 97116,
         description: '復古飾面緊身胸衣 是一款 Nappa 皮革雕塑，其半閃亮的紅色表面成為身體曲線的畫布。這款單品採用引人注目的緊身胸衣細節和奢華的絲綢襯裡，既是一件盔甲，又是一種誘惑，專為那些以泰然自若和力量掌控空間的人士而設計。',
+        btnUrl:'#',
+
     },
     {
         imgUrl: 'https://s3-alpha-sig.figma.com/img/8e3f/98d1/33102a5ce51cf72c3d0372dd495b52ca?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b4ik4Zl48gWexboWZhFQHVzVH7x2BrlVD1KA4f0Z6Uy4OW29uvT6zpVSjaoDYoO~4P6d1cWKk1TAgYur87ewedO6R1euuUSDXmNLJxYooThH5KQB0vZfJUfrlu9vP9VlOVm6nuUj7cy-hd0DaBwC-x1wzV7PNu9P9x88o7qDCPoPf3IYF5BYBqiT4-FMlufKs259LIO6Wb~QjCJu92zjxjWHyFEHnKbFkhrC5gfca8kTn1rDerw6~HbVI3MrXrhu9QFqkY-XHqIXHeUlIM66Wsm~S1i2sXeraS81t0~39APS8MIJ3kQE7Rh4Z-IOvudnRQfJ98cc5h1CikHdlgy9LA__',
         name : '緊身胸衣腰帶',
         price: 10979,
         description: '緊身胸衣腰帶 是一款 Nappa 皮革雕塑，其半閃亮的紅色表面成為身體曲線的畫布。這款單品採用引人注目的緊身胸衣細節和奢華的絲綢襯裡，既是一件盔甲，又是一種誘惑，專為那些以泰然自若和力量掌控空間的人士而設計。',
+        btnUrl:'bustier-belt.html',
 
     },    
     {
@@ -35,7 +41,7 @@ const popularPictureArr = [
         name : '絲綢垂墜連身裙',
         price: 65448,
         description: '絲綢垂墜連身裙 是一款 Nappa 皮革雕塑，其半閃亮的紅色表面成為身體曲線的畫布。這款單品採用引人注目的緊身胸衣細節和奢華的絲綢襯裡，既是一件盔甲，又是一種誘惑，專為那些以泰然自若和力量掌控空間的人士而設計。',
-
+        btnUrl:'#',
     }
     
 ]
@@ -171,7 +177,7 @@ const assamblePopularItem = (popularData)=>{
                 </div>
                 <div class="position-absolute popular-txt">
                     <p class= "mb-3">${item.description}</p>
-                    <a href="#" class="fw-bold text-decoration-underline">查看細節</a>
+                    <a href=${item.btnUrl} class="fw-bold text-decoration-underline">查看細節</a>
                 </div>
             </li>`;
         str += popularContent;
@@ -214,7 +220,6 @@ renderContent(popularMbItem,popularMbItemHtml);
 
 
 const stylistCard = document.querySelector('#stylistCard');
-const shopProductCard = document.querySelector('#shopProductCard');
 
 
 const assambleStylistContent = (data)=>{
@@ -241,36 +246,61 @@ const assambleStylistContent = (data)=>{
         return str;
 }
 
+assambleStylistContent(stylistCardData);
+const stylistHtml = assambleStylistContent(stylistCardData);
+renderContent(stylistCard, stylistHtml );
+
+const shopProductCard = document.querySelector('#shopProductCard');
+
+
 const assambleProductContent = (data)=>{
     let str ='';
-    for(let i=0; i<3; i++){
-        shopProductCardData.forEach(item =>{
-            const productContent = ` <div class="col">
-                        <a href=${item.productUrl}>
-                        <div class="mb-4">
-                            <img class="w-100" src=${item.imgUrl} width="377" height="518" alt="...">
-                        </div>
-                        <div class="text-center">
-                            <h2 class="fs-8">${item.name}</h2>
-                            <span class="fs-8">$${item.price}</span>
-                        </div>
-                        </a>
-                    </div>`
-            str += productContent;
-        })
+    const renderTimes = shopProductCard.dataset.times;
+    if(renderTimes){
+        for(let i=0; i < renderTimes; i++){
+            shopProductCardData.forEach(item =>{
+                const productContent = ` <div class="col">
+                            <a href=${item.productUrl}>
+                            <div class="mb-4">
+                                <img class="w-100" src=${item.imgUrl} width="377" height="518" alt="...">
+                            </div>
+                            <div class="text-center">
+                                <h2 class="fs-8">${item.name}</h2>
+                                <span class="fs-8">$${item.price}</span>
+                            </div>
+                            </a>
+                        </div>`
+                str += productContent;
+            })
+        }
+
     }
     return str;
 }
 
-const stylistHtml = assambleStylistContent(stylistCardData);
 const productHtml = assambleProductContent(shopProductCardData);
-
-assambleStylistContent(stylistCardData);
-renderContent(stylistCard, stylistHtml );
 
 assambleProductContent(shopProductCardData);
 renderContent(shopProductCard,productHtml );
 
+
+
+const productAmount = document.querySelector('#productAmount');
+let amount = 1;
+
+productAmount.addEventListener('click',(e)=>{
+    const click = e.target;
+    const digit = document.querySelector('#productAmount .digit');
+    if(click.tagName.toLowerCase() === 'i'){
+        if(click.classList.contains('bi-dash-lg') && amount >1){
+            amount --;
+            digit.textContent = amount;
+        }if(click.classList.contains('bi-plus-lg')){
+            amount ++;
+            digit.textContent = amount;
+        }
+    }
+})
 
 
 

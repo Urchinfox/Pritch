@@ -7,8 +7,7 @@
 </head>
 <body>
     <%- include('./layout/header'); -%>
-    <div class="sytlistProfile">     
-        <div class="stylist_info container  mx-auto row">
+        <section class="stylist_info container  mx-auto row mt-lg-12 mt-2">
             <div class="stylist_info_photo col-5">
                 <img src="../assets/images/stylist/brian.png" alt="">
             </div>
@@ -26,21 +25,23 @@
                     立即預約
                 </button>
             </div>
-        </div>
-        <div class="stylist_project container-fluid px-0">
+        </section>
+
+        <section class="stylist_project container-fluid px-0 my-lg-14 my-10">
             <h3 class="text-center fs-4 fw-bold mb-2">Project</h3>
             <h4 class="text-center fs-5 mb-7">造型作品</h4>
             <div class="row gx-0">
                 <div class="col me-2">
-                    <img  src="../assets/images/stylist/brian_project_1.jfif" alt=""></div>
+                    <img  src="../assets/images/stylist/brian_project_1.jfif" alt="..."></div>
                 <div class="col  me-2">
-                    <img  src="../assets/images/stylist/brian_project_2.jfif" alt=""></div>
+                    <img  src="../assets/images/stylist/brian_project_2.jfif" alt="..."></div>
                 <div class="col">
-                    <img  src="../assets/images/stylist/brian_project_3.jfif" alt=""></div>
+                    <img  src="../assets/images/stylist/brian_project_3.jfif" alt="..."></div>
                 
             </div>
-        </div>
-        <div class="stylist_review container m-auto">
+        </section>
+
+        <section class="stylist_review container m-auto mb-lg-14 mb-12">
             <h3 class="text-center fs-4 fw-bold mb-2">Review</h3>
             <h4 class="text-center fs-5 mb-7">評價回饋</h4>
             <ul class="row list-unstyled mb-7">
@@ -105,8 +106,7 @@
             <button class="btn btn-dark px-6 py-2 d-block mx-auto">
                 立即預約
             </button>
-        </div>
-    </div>
+        </section>
     <%- include('./layout/footer'); -%>
     <script type="module" src="../main.js"></script>
 </body>
