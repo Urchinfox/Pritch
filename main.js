@@ -1,3 +1,4 @@
+import { render } from 'ejs';
 import './assets/scss/all.scss';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
@@ -66,26 +67,35 @@ const shopProductCardData = [
       imgUrl: 'https://s3-alpha-sig.figma.com/img/cc9b/a748/95d3b9535ebcf99858737e9d554514cc?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=noZ7LGBX51eC5XMyD-UIr-3~d-zUhYoFtiEcaFvkKf8-tW5ag~1hf8Jdc1yIxt77g0hWdwSnVe8O-Zi9Fwz4ZjhBExvMDx8ykAE3U5brEvICFgJC1cDGaLyQ20E1cXIh6P5yYjURzWA57PJ~rICnMbHCdVXUOap2fQObgeOjzVsME6eMeUPBZ7uSu6oLBq~QxbhaxJ4001Nj0xktRE2hlFXk71rQOwOOkcDHbzF0ZpH~YI-DM17AYUCBcOxSoJdbM3qesZQVjo0xBa49gtxSqUNxC5nIqd34YvTUtU2D~VQVEGNVkTKZcdrhWidyjFiUH1-xd8V1fNbVa7e1AE0K4g__',
       name: '飛行員運動褲',
       price: 69656,
+      productUrl :"#",
     },
     {
         imgUrl: 'https://s3-alpha-sig.figma.com/img/7579/abf7/ff64de5099a3c6c26cee9f7afe4016cb?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=US1KX0195yEBrd8lQgFgpuJ~~GDojoehj25bxKOmK5X11u~qJgewFLAxiEPlZuMOScDCd0HGUF1NGSJMyDuN2x2pNJxBxYR6OHdDlDWh7s2U2PAc~1R955aJu4r0CJqWGwklz15rAAUdExL6c5fTh9hvJ6dk~5omwvVDjGkyhFPiykEn64gHhdc1EON5LWJbDugEk1DbnoM0PQuyurUSR-F6ZDc1rmgZnOqElRrJvKSl1GIDHAaXSZ0L9TQ3cZeNpyRC1~ikcr1HH4gv9WvXN4mLVSJA-AjpDKrmKRPugulNcidNhw41Nony6ye4RpI4BvScxHOcIywsslI2izRGVA__',
         name: 'BIA 緊身胸衣',
         price: 32084, 
+        productUrl :"#",
+
     },
     {
         imgUrl: 'https://s3-alpha-sig.figma.com/img/bb31/e2d6/19c7e5c57d34ce0ff9c2a84e18590f8c?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YMmGCweHufv2vmNHbhbLSHo8S2Gj~D4Gv9zk~wsLH8jx0esCNJf9FbRNifMI3VWCctyBQYSs8851ZxHlNqeHqSX59y32IS~QUbLlEsC~T41cgSjWZG1fP5j~yIIbIascQn6uDE7eNis9S3Svxu5ZkfAjlW~8PWMggcUXXua2dP~8BTAWZmX0AWdtr2nW3FvR1rOel9~x~3~A9fxZLPZzka0TvlBy-CMVpnMU8WZ8Neupxcwm5Zj0nlu4hgCr3BAjtbNJByfVQ1WI~Oq7qnKUuTu9KS~XC0A4FPLkBVf9HNCtowjV1tJfJwheUzJrkajDjK1aweojizaia2qnTVX5nQ__',
         name: '復古飾面緊身胸衣',
         price: 97116, 
+        productUrl :"#",
+
     },
     {
         imgUrl: 'https://s3-alpha-sig.figma.com/img/8e3f/98d1/33102a5ce51cf72c3d0372dd495b52ca?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b4ik4Zl48gWexboWZhFQHVzVH7x2BrlVD1KA4f0Z6Uy4OW29uvT6zpVSjaoDYoO~4P6d1cWKk1TAgYur87ewedO6R1euuUSDXmNLJxYooThH5KQB0vZfJUfrlu9vP9VlOVm6nuUj7cy-hd0DaBwC-x1wzV7PNu9P9x88o7qDCPoPf3IYF5BYBqiT4-FMlufKs259LIO6Wb~QjCJu92zjxjWHyFEHnKbFkhrC5gfca8kTn1rDerw6~HbVI3MrXrhu9QFqkY-XHqIXHeUlIM66Wsm~S1i2sXeraS81t0~39APS8MIJ3kQE7Rh4Z-IOvudnRQfJ98cc5h1CikHdlgy9LA__',
         name: '緊身胸衣腰帶',
         price:10979, 
+        productUrl :"bustier-belt.html",
+
     },
     {
         imgUrl: 'https://s3-alpha-sig.figma.com/img/1b7c/545d/80b8d701aaab1a7cb32c648c0a5317ff?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=owWfiZ1fMHEKjEsEwHcE7EGEnYdb~RDby9Ep5uK~jBB0KaCJG-8pTzj07fMw3slPB-utOPFsEq93mw~Sg0QkQA-tK6zaUDMhH47XvQFxP2yj4SN06f7czasUa9L6NtLWG~1o0xrqRo9OWeSQG4dplpai5uS9t5cK4aIcB7UQ8CuGWWoeGkGb~Kkp9hE5DlQnxawWvcBUFK55N8-DWvmRpoisu9Qj2GYkrNQRXkO2hc4bp8h65q~3p7Zo~B4feIvLeHV24K84ARQAaCSqGhclgxyhlUTbbIHmuGPTNGpqjLVztKkzTIdgtZXHS6TmAY~0LqBerJsHzYmCOHOsbQD~7A__',
         name: '絲綢垂墜連身裙',
         price:65448, 
+        productUrl :"#",
+
     },
 ]
 //carousel
@@ -95,7 +105,6 @@ const popularUl = document.querySelector('#popularUl');
 const popularArrowL = document.querySelector('.popular-arrow-l');
 const popularArrowR = document.querySelector('.popular-arrow-r');
 const popularMbItem = document.querySelector('#popularMbItem');
-// console.log(popularArrowL)
 
 let currentLargePic = 2;
 let center = 0; //currentPosition
@@ -110,8 +119,8 @@ if(popularArrowL){
             popularUl.style.transform = `translateX(${center}%)`; 
         }
     
-        renderPopularItem(popularPictureArr);
-        console.log(currentLargePic)
+        renderContent(popularUl,popularHTML);
+        enlargePic();
     })
 }
 if(popularArrowR){
@@ -124,13 +133,31 @@ if(popularArrowR){
             center -= moveAmount;
             popularUl.style.transform = `translateX(${center}%)`; 
         }
-        renderPopularItem(popularPictureArr);
-    
-        console.log(currentLargePic)
+        renderContent(popularUl,popularHTML);
+        enlargePic();
+
     })
 }
 
-const renderPopularItem = (popularData) => {
+function enlargePic(){
+    const popularLi = document.querySelectorAll('.popular-li');
+    const popularImg = document.querySelectorAll('.popular-img');
+    const popularDesc = document.querySelectorAll('.popular-txt');
+    popularLi.forEach((item,index) =>{
+            if (index === currentLargePic) {  
+                item.classList.add('lg-pic');  
+                popularImg[index].style.width = '100%';
+                popularDesc[index].style.display = 'block';
+
+            } else {
+                item.classList.remove('lg-pic');  
+                popularDesc[index].style.display = 'none';
+
+            }             
+    })
+}
+
+const assamblePopularItem = (popularData)=>{
     let str = '';
     popularData.forEach((item, index) => {
         const popularContent = `
@@ -149,34 +176,24 @@ const renderPopularItem = (popularData) => {
             </li>`;
         str += popularContent;
     });
-    if(popularUl){
-        popularUl.innerHTML = str;
+    return str;
+}
+const popularHTML = assamblePopularItem(popularPictureArr);
+
+
+const renderContent = (object, content) =>{
+    if(content && object){
+        object.innerHTML = content;
     }
-    const popularLi = document.querySelectorAll('.popular-li');
-    const popularImg = document.querySelectorAll('.popular-img');
-    const popularDesc = document.querySelectorAll('.popular-txt');
-    popularLi.forEach((item,index) =>{
-        if(index === currentLargePic){
-            if (index === currentLargePic) {  
-                item.classList.add('lg-pic');  
-                popularImg[index].style.width = '100%';
-                popularDesc[index].style.display = 'block';
+}
+renderContent(popularUl,popularHTML);
+enlargePic();
 
-            } else {
-                item.classList.remove('lg-pic');  
-                popularDesc[index].style.display = 'none';
 
-            }            
-        }
-
-    })
-
-};
-
-const renderPopularMbItem = (popularData)=>{
+const assamblePopularMbItem = (popularData)=>{
     let str = '';
     const limit = 4;
-    popularPictureArr.forEach((item,index)=>{
+    popularData.forEach((item,index)=>{
         const content = `<div class="col">
             <img class="w-100" src=${item.imgUrl} alt="...">
             <div class="d-flex justify-content-between pt-2 px-3 fs-8">
@@ -188,54 +205,48 @@ const renderPopularMbItem = (popularData)=>{
             str += content;
         }
     })
-    if(popularMbItem){
-        popularMbItem.innerHTML = str;
-    }
+    return str;
 }
+const popularMbItemHtml = assamblePopularMbItem(popularPictureArr); 
 
-renderPopularItem(popularPictureArr);
-renderPopularMbItem(popularPictureArr);
+assamblePopularMbItem(popularPictureArr);
+renderContent(popularMbItem,popularMbItemHtml);
 
 
 const stylistCard = document.querySelector('#stylistCard');
-
-const renderStylistCard = (stylistData) =>{
-    let str = '';
-    stylistCardData.forEach(item=>{
-        const stylistContent = `<div class="col  mb-lg-0 mb-9">
-            <div class="">
-                <div>
-                    <img class="w-100" width="324" height="324" src="${item.imgUrl}" alt="...">   
-                </div>
-
-                <div class="mt-2 px-3">
-                    <h3 class="fs-5 fw-bold border-2 border-bottom pb-1 border-primary mb-3">${item.name}</h3>
-                    <p class="mb-6 fs-8">${item.description}</p>
-                    <div class="text-center text-lg-start">
-                        <a href="#" class="btn btn-primary">立即預約</a>
-                    </div>
-                </div> 
-            </div>
-        </div>`
-        
-          str += stylistContent;
-    })
-    if(stylistCard){
-        stylistCard.innerHTML = str;
-    }
-}
-
-renderStylistCard(stylistCardData);
-
-//shop productCard
 const shopProductCard = document.querySelector('#shopProductCard');
 
-const renderProductCard = (shopProductCardData)=>{
+
+const assambleStylistContent = (data)=>{
     let str = '';
-    for(let i = 0; i < 3; i++){
+        stylistCardData.forEach(item=>{
+            const stylistContent = `<div class="col  mb-lg-0 mb-9">
+                <div class="">
+                    <div>
+                        <img class="w-100" width="324" height="324" src="${item.imgUrl}" alt="...">   
+                    </div>
+    
+                    <div class="mt-2 px-3">
+                        <h3 class="fs-5 fw-bold border-2 border-bottom pb-1 border-primary mb-3">${item.name}</h3>
+                        <p class="mb-6 fs-8">${item.description}</p>
+                        <div class="text-center text-lg-start">
+                            <a href="#" class="btn btn-primary">立即預約</a>
+                        </div>
+                    </div> 
+                </div>
+            </div>`
+            
+              str += stylistContent;
+        })
+        return str;
+}
+
+const assambleProductContent = (data)=>{
+    let str ='';
+    for(let i=0; i<3; i++){
         shopProductCardData.forEach(item =>{
             const productContent = ` <div class="col">
-                        <a href="#">
+                        <a href=${item.productUrl}>
                         <div class="mb-4">
                             <img class="w-100" src=${item.imgUrl} width="377" height="518" alt="...">
                         </div>
@@ -248,13 +259,23 @@ const renderProductCard = (shopProductCardData)=>{
             str += productContent;
         })
     }
-    if(shopProductCard){
-        shopProductCard.innerHTML = str;
-    }
+    return str;
 }
 
+const stylistHtml = assambleStylistContent(stylistCardData);
+const productHtml = assambleProductContent(shopProductCardData);
 
-renderProductCard(shopProductCardData);
+assambleStylistContent(stylistCardData);
+renderContent(stylistCard, stylistHtml );
+
+assambleProductContent(shopProductCardData);
+renderContent(shopProductCard,productHtml );
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,25 @@
+.size-amount i{
+    top: 50%;
+    cursor: pointer;
+}
+.size-amount .bi-plus-lg{
+    right: 10%;
+}
+
+.size-amount .bi-dash-lg{
+    left: 10%;
+}
+
+
+/* 調整圖標顏色和動畫 */
+.accordion-button .toggle-icon {
+    transition: transform 0.3s;
+  }
+  
+  .accordion-button:not(.collapsed) .toggle-icon {
+    transform: rotate(45deg); /* 展開時旋轉圖標 */
+  }
+
+.accordion-btn-delete::after {
+    content: none ;
+  }

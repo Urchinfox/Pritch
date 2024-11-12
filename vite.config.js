@@ -6,6 +6,7 @@ import { glob } from 'glob';
 
 import liveReload from 'vite-plugin-live-reload';
 
+
 function moveOutputPlugin() {
   return {
     name: 'move-output',
