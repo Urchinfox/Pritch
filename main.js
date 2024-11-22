@@ -84,6 +84,7 @@ const shopProductCardData = [
     },
     {
         imgUrl: '../assets/images/corset.png',
+        name: '復古飾面緊身胸衣',
         price: 97116, 
         productUrl :"#",
 
