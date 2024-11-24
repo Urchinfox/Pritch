@@ -6,14 +6,14 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 const popularPictureArr = [
     {
-        imgUrl:'../assets/images/sweatpants.png',
+        imgUrl:'/Pritch/assets/images/sweatpants.png',
         name : '飛行員運動褲',
         price: 69656,
         description: '飛行運動褲 是一款 Nappa 皮革雕塑，其半閃亮的紅色表面成為身體曲線的畫布。這款單品採用引人注目的緊身胸衣細節和奢華的絲綢襯裡，既是一件盔甲，又是一種誘惑，專為那些以泰然自若和力量掌控空間的人士而設計。',
         btnUrl:'#',
     },
     {
-        imgUrl:'../assets/images/BIA-corset.png',
+        imgUrl:'/Pritch/assets/images/BIA-corset.png',
         name : 'BIA 緊身胸衣',
         price: 32084,
         description: 'BIA 緊身胸衣 是一款 Nappa 皮革雕塑，其半閃亮的紅色表面成為身體曲線的畫布。這款單品採用引人注目的緊身胸衣細節和奢華的絲綢襯裡，既是一件盔甲，又是一種誘惑，專為那些以泰然自若和力量掌控空間的人士而設計。',
@@ -21,7 +21,7 @@ const popularPictureArr = [
 
     },    
     {
-        imgUrl:'../assets/images/corset.png',
+        imgUrl:'/Pritch/assets/images/corset.png',
         name : '復古飾面緊身胸衣',
         price: 97116,
         description: '復古飾面緊身胸衣 是一款 Nappa 皮革雕塑，其半閃亮的紅色表面成為身體曲線的畫布。這款單品採用引人注目的緊身胸衣細節和奢華的絲綢襯裡，既是一件盔甲，又是一種誘惑，專為那些以泰然自若和力量掌控空間的人士而設計。',
@@ -29,7 +29,7 @@ const popularPictureArr = [
 
     },
     {
-        imgUrl:'../assets/images/belt.png',
+        imgUrl:'/Pritch/assets/images/belt.png',
         name : '緊身胸衣腰帶',
         price: 10979,
         description: '緊身胸衣腰帶 是一款 Nappa 皮革雕塑，其半閃亮的紅色表面成為身體曲線的畫布。這款單品採用引人注目的緊身胸衣細節和奢華的絲綢襯裡，既是一件盔甲，又是一種誘惑，專為那些以泰然自若和力量掌控空間的人士而設計。',
@@ -37,7 +37,7 @@ const popularPictureArr = [
 
     },    
     {
-        imgUrl:'../assets/images/dress.png',
+        imgUrl:'/Pritch/assets/images/dress.png',
         name : '絲綢垂墜連身裙',
         price: 65448,
         description: '絲綢垂墜連身裙 是一款 Nappa 皮革雕塑，其半閃亮的紅色表面成為身體曲線的畫布。這款單品採用引人注目的緊身胸衣細節和奢華的絲綢襯裡，既是一件盔甲，又是一種誘惑，專為那些以泰然自若和力量掌控空間的人士而設計。',
@@ -48,56 +48,56 @@ const popularPictureArr = [
 
 const stylistCardData = [
     {
-        imgUrl :'../assets/images/stylist/Brian.png',
+        imgUrl :'/Pritch/assets/images/stylist/Brian.png',
         name : 'Brian',
         description: '以大膽創新的設計理念而聞名,擁有超過20年的時尚造型經驗。曾經獲得多個國際設計獎項,包括「2023年度造型師獎」。擅長將前衛的設計元素融入實穿的服裝中,他的作品經常被時尚界的權威刊物所推崇。',
     },
     {
-        imgUrl:'../assets/images/stylist/Kate.png',
+        imgUrl:'/Pritch/assets/images/stylist/Kate.png',
         name:'Kate',
         description:'擁有15年的專業經驗。她以其優雅的剪裁和細膩的手工藝著稱,曾為多位名人設計過紅毯造型。設計風格兼具現代感與古典美,作品經常在時尚展覽中亮相,受到業界廣泛讚譽。',
     },
     {
-        imgUrl:'../assets/images/stylist/Elena.png',
+        imgUrl:'/Pritch/assets/images/stylist/Elena.png',
         name:'Elena',
         description:'以其獨特的創意和前瞻性的設計理念迅速崛起。儘管她的職業生涯僅有五年,但她已經在多個時尚比賽中獲得冠軍,包括「新銳造型師獎」。擅長使用創新的面料和獨特的剪裁技術,為客戶創造出令人驚豔的造型。',
     },
     {
-        imgUrl:'../assets/images/stylist/Shen.png',
+        imgUrl:'/Pritch/assets/images/stylist/Shen.png',
         name:'Shen',
         description:'經驗豐富的造型師,擁有超過20年的行業經驗。他以其精緻的色彩搭配技術而聞名。曾經為知名品牌擔任首席造型師,並且在時尚界的各大活動中擔任評委。設計風格融合了東方元素與西方現代感,深受客戶喜愛。',
     },
 ]
 const shopProductCardData = [
     {
-        imgUrl:'/assets/images/sweatpants.png',
+        imgUrl:'/Pritch/assets/images/sweatpants.png',
       name: '飛行員運動褲',
       price: 69656,
       productUrl :"#",
     },
     {
-        imgUrl:'/assets/images/BIA-corset.png',
+        imgUrl:'/Pritch/assets/images/BIA-corset.png',
         name: 'BIA 緊身胸衣',
         price: 32084, 
         productUrl :"#",
 
     },
     {
-        imgUrl:'/assets/images/corset.png',
+        imgUrl:'/Pritch/assets/images/corset.png',
         name: '復古飾面緊身胸衣',
         price: 97116, 
         productUrl :"#",
 
     },
     {
-        imgUrl:'/assets/images/belt.png',
+        imgUrl:'/Pritch/assets/images/belt.png',
         name: '緊身胸衣腰帶',
         price:10979, 
         productUrl :"bustier-belt.html",
 
     },
     {
-        imgUrl:'/assets/images/dress.png',
+        imgUrl:'/Pritch/assets/images/dress.png',
         name: '絲綢垂墜連身裙',
         price:65448, 
         productUrl :"#",
