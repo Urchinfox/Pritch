@@ -169,7 +169,7 @@ const assamblePopularItem = (popularData)=>{
         const popularContent = `
             <li class="popular-li position-relative">
                 <div>
-                    <img class="popular-img" width="306" height="408" src="${item.imgUrl}" alt="...">
+                    <img class="popular-img" width="306" height="408" src=${item.imgUrl} alt="...">
                 </div>
                 <div class="d-flex justify-content-between">
                     <p>${item.name}</p>
@@ -228,7 +228,7 @@ const assambleStylistContent = (data)=>{
             const stylistContent = `<div class="col  mb-lg-0 mb-9">
                 <div class="">
                     <div>
-                        <img class="w-100" width="324" height="324" src="${item.imgUrl}" alt="...">   
+                        <img class="w-100" width="324" height="324" src=${item.imgUrl} alt="...">   
                     </div>
     
                     <div class="mt-2 px-3">
