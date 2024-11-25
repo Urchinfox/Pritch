@@ -6,14 +6,14 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 const popularPictureArr = [
     {
-        imgUrl:'/Pritch/assets/images/sweatpants.png',
+        imgUrl:'/Pritch/assets/images/shop/sweatpants.png',
         name : '飛行員運動褲',
         price: 69656,
         description: '飛行運動褲 是一款 Nappa 皮革雕塑，其半閃亮的紅色表面成為身體曲線的畫布。這款單品採用引人注目的緊身胸衣細節和奢華的絲綢襯裡，既是一件盔甲，又是一種誘惑，專為那些以泰然自若和力量掌控空間的人士而設計。',
         btnUrl:'#',
     },
     {
-        imgUrl:'/Pritch/assets/images/BIA-corset.png',
+        imgUrl:'/Pritch/assets/images/shop/BIA-corset.png',
         name : 'BIA 緊身胸衣',
         price: 32084,
         description: 'BIA 緊身胸衣 是一款 Nappa 皮革雕塑，其半閃亮的紅色表面成為身體曲線的畫布。這款單品採用引人注目的緊身胸衣細節和奢華的絲綢襯裡，既是一件盔甲，又是一種誘惑，專為那些以泰然自若和力量掌控空間的人士而設計。',
@@ -21,7 +21,7 @@ const popularPictureArr = [
 
     },    
     {
-        imgUrl:'/Pritch/assets/images/corset.png',
+        imgUrl:'/Pritch/assets/images/shop/corset.png',
         name : '復古飾面緊身胸衣',
         price: 97116,
         description: '復古飾面緊身胸衣 是一款 Nappa 皮革雕塑，其半閃亮的紅色表面成為身體曲線的畫布。這款單品採用引人注目的緊身胸衣細節和奢華的絲綢襯裡，既是一件盔甲，又是一種誘惑，專為那些以泰然自若和力量掌控空間的人士而設計。',
@@ -29,7 +29,7 @@ const popularPictureArr = [
 
     },
     {
-        imgUrl:'/Pritch/assets/images/belt.png',
+        imgUrl:'/Pritch/assets/images/shop/belt.png',
         name : '緊身胸衣腰帶',
         price: 10979,
         description: '緊身胸衣腰帶 是一款 Nappa 皮革雕塑，其半閃亮的紅色表面成為身體曲線的畫布。這款單品採用引人注目的緊身胸衣細節和奢華的絲綢襯裡，既是一件盔甲，又是一種誘惑，專為那些以泰然自若和力量掌控空間的人士而設計。',
@@ -37,7 +37,7 @@ const popularPictureArr = [
 
     },    
     {
-        imgUrl:'/Pritch/assets/images/dress.png',
+        imgUrl:'/Pritch/assets/images/shop/dress.png',
         name : '絲綢垂墜連身裙',
         price: 65448,
         description: '絲綢垂墜連身裙 是一款 Nappa 皮革雕塑，其半閃亮的紅色表面成為身體曲線的畫布。這款單品採用引人注目的緊身胸衣細節和奢華的絲綢襯裡，既是一件盔甲，又是一種誘惑，專為那些以泰然自若和力量掌控空間的人士而設計。',
@@ -70,34 +70,34 @@ const stylistCardData = [
 ]
 const shopProductCardData = [
     {
-        imgUrl:'/Pritch/assets/images/sweatpants.png',
+        imgUrl:'/Pritch/assets/images/shop/sweatpants.png',
       name: '飛行員運動褲',
       price: 69656,
       productUrl :"#",
     },
     {
-        imgUrl:'/Pritch/assets/images/BIA-corset.png',
+        imgUrl:'/Pritch/assets/images/shop/BIA-corset.png',
         name: 'BIA 緊身胸衣',
         price: 32084, 
         productUrl :"#",
 
     },
     {
-        imgUrl:'/Pritch/assets/images/corset.png',
+        imgUrl:'/Pritch/assets/images/shop/corset.png',
         name: '復古飾面緊身胸衣',
         price: 97116, 
         productUrl :"#",
 
     },
     {
-        imgUrl:'/Pritch/assets/images/belt.png',
+        imgUrl:'/Pritch/assets/images/shop/belt.png',
         name: '緊身胸衣腰帶',
         price:10979, 
         productUrl :"bustier-belt.html",
 
     },
     {
-        imgUrl:'/Pritch/assets/images/dress.png',
+        imgUrl:'/Pritch/assets/images/shop/dress.png',
         name: '絲綢垂墜連身裙',
         price:65448, 
         productUrl :"#",
