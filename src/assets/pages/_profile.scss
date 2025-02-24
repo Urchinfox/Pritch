@@ -1,0 +1,62 @@
+.profile-order-progress div{
+    position: relative;
+    text-align: center;
+    @include mobile{
+        font-size: 12px;
+    }
+}
+.profile-order-progress div::after{
+    content: '';
+    width: 50px;
+    height: 5px;
+    position:absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid black;
+    @include mobile{
+        width: 20px;
+    }
+}
+.profile-order-progress .active::after{
+    background-color: black;
+}
+.profile-order-progress .disabled::after{
+    background-color: rgba(0, 0, 0, .1);
+    border:1px solid rgba(0, 0, 0, .1);
+}
+.profile-order-progress .disabled{
+    color : rgba(0, 0, 0, .1);
+}
+
+
+.personal-info input, .personal-info select{
+    border: 1px solid $primary;
+    outline: none;
+}
+
+
+.outline-0:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+.profile-control button, .profile-control a{
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), 
+    -4px -4px 10px rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+}
+
+.order .bi-search-heart{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    font-size: larger;
+}
+
+.comment-star i{ 
+    cursor: pointer; //comment-page
+}

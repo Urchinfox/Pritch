@@ -1,0 +1,46 @@
+.size-amount i{
+    top: 50%;
+    cursor: pointer;
+}
+.size-amount .bi-plus-lg{
+    right: 10%;
+}
+
+.size-amount .bi-dash-lg{
+    left: 10%;
+}
+
+
+.accordion-button .toggle-icon {
+    transition: transform 0.3s;
+  }
+  
+  .accordion-button:not(.collapsed) .toggle-icon {
+    transform: rotate(45deg);
+  }
+
+.accordion-btn-delete::after {
+    content: none ;
+  }
+
+
+  .carousel-control-prev-icon {
+    background-image: none;
+}
+
+.size{
+  appearance: none;
+}
+
+
+.triangle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid black; 
+  pointer-events: none; 
+}

@@ -1,0 +1,11 @@
+@import "bootstrap/scss/functions"; //需放在前方 node_modules需清除
+
+@import './variables'; //需額外另存variable-dark.scss
+
+@import "bootstrap/scss/bootstrap"; //node_modules需清除
+@import './utilities';
+@import '../pages/index';
+@import '../pages/profile';
+@import '../pages/shop';
+@import '../pages/stylistProfile';
+@import '../pages/productDetail';

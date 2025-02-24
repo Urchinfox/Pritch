@@ -1,0 +1,131 @@
+.banner{
+    &-txt{
+      bottom: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    &-img{
+      @include mobile{
+        height: 600px;
+        width: 100%;
+      }
+    }
+    &-img img{
+      @include mobile{
+        height: 100%;
+        width: 100%;
+        object-fit: cover; 
+        object-position: 80% ;
+  
+      }
+    }
+  
+  }
+  
+  //popular-----------------------------
+  .lg-pic{
+    width: 40%; 
+  }
+  .popular{
+  
+    &-ul{
+      transition: transform .3s;
+    }
+  
+    &-ul li{
+      margin-right: 24px;
+  
+    }
+  
+    &-arrow-l,&-arrow-r{
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    &-arrow-l{
+      top: 50%;
+      left: 0;
+  
+    }
+    &-arrow-r{
+      top: 50%;
+      right: 0;
+    }
+    &-large-pic {
+      transform: scale(1.2); 
+      transform: translateY(10px);
+      transition:  .3s; 
+    }
+    &-txt{
+      bottom: 0;
+      left: -80%;
+      // word-wrap: break-word; 
+      // white-space: normal; 
+      max-width: 300px;
+      display: none;
+      font-size: clamp(12px, 1vw, 16px);
+    }
+   
+  }
+  
+  
+  .feature{
+   &-txt{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+   }
+   &-shadow {
+    position: relative; 
+  }
+  
+  
+  &-shadow::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+  }
+  
+  &-shadow:hover::after{
+    opacity: 1; 
+  }
+  &-shadow img{
+    @include mobile{
+      height: 127px;
+      object-fit: cover;
+    }
+  }
+  &-shadow:hover &-txt h3,&-txt p{
+    color: white;
+    display: block;
+  }
+  &-shadow:hover &-txt p{
+    display: block;
+  }
+  &-txt{
+    z-index: 1;
+    position: relative;
+  }
+  
+  &-txt h3{
+    @include mobile{
+      font-size: 16px;
+    }
+  }
+  
+  &-txt p{
+    display: none;
+    @include mobile{
+      font-size: 14px;
+    }
+  }
+  
+  }
