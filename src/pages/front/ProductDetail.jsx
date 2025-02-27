@@ -1,25 +1,38 @@
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { render } from "react-dom";
 import belt from '../../assets/images/shop/belt.png';
 import BIAcorset from '../../assets/images/shop/BIA-corset.png';
 import Loading from "../../components/Loading";
+import { useDispatch } from "react-redux";
+import { cartHint } from "../../slices/cartMessageSlice";
+
 
 export default function ProductDetail() {
     const [renderProduct, setRenderProduct] = useState([]);
     const { id } = useParams();
     const [size,setSize] = useState([]);
     const [isLoading,setIsLoading] = useState(false);
+    const dispatch = useDispatch();
     const getProduct = async () => {
         try {
             const resProduct = await axios.get(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/products`)
-            console.log(resProduct.data.products)
             setRenderProduct(resProduct.data.products.filter((product) => product.id === id))
-
         } catch (error) {
             console.log(error)
         }
+    }
+
+
+    const getCartItem = async() => {
+        try {
+            const res = await axios.get(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/cart`);
+            dispatch(cartHint(res.data.data.carts))
+            
+        } catch (error) {
+            console.log(error)
+        }
+
     }
 
     const addCartItem = async(id,qty) =>{
@@ -32,15 +45,16 @@ export default function ProductDetail() {
           setIsLoading(true);
         try {
             const res = await axios.post(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/cart`,data);
+            getCartItem();
             console.log(res);
             
         } catch (error) {
             console.log(error);
-        }
-        finally{
+        }finally{
             setIsLoading(false);
         }
     }
+
 
     const handleSize = (e) => {
 
@@ -91,11 +105,11 @@ export default function ProductDetail() {
                     <div className="col-7 d-lg-block d-none">
                         <div className="row g-1">
                             {renderProduct.map((item,index) => {
-                                return (<>
-                                    <div className="col-6" key={index}>
+                                return (<React.Fragment key={index}>
+                                    <div className="col-6" >
                                         <img className="w-100" src={item.imagesUrl} width={100} height={100} alt="..." />
                                     </div>
-                                </>)
+                                </React.Fragment>)
                             })}
                         </div>
                     </div>
@@ -128,12 +142,12 @@ export default function ProductDetail() {
                     <div className="col-lg-5 col-12 mt-6 mt-lg-0">
                         <div className="mb-7">
                             {
-                                renderProduct.map((item) => {
-                                    return (<>
+                                renderProduct.map((item,index) => {
+                                    return (<React.Fragment key={index}>
                                         <h2 className="fs-6 mb-6">{item.title}</h2>
                                         <p className="fs-7 mb-3">{item.description}</p>
                                         <span>${item.price}</span>
-                                    </>)
+                                    </React.Fragment>)
                                 })
                             }
 

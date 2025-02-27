@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react"
 import axios from "axios";
-import { useContext } from "react";
-import { handleErrorMessage, messageContext, handleSuccessMessage } from "../store/MessageStore";
+import { useDispatch } from "react-redux";
+import { createMsgThunk } from "../slices/toastMeassgeSlice";
 
 export default function ProductModal({ closeModal, getProduct, type, product }) {
-  const [, dispatch] = useContext(messageContext);
   const [tempProduct, setTempProduct] = useState({
     "title": "",
     "category": "",
@@ -17,6 +16,8 @@ export default function ProductModal({ closeModal, getProduct, type, product }) 
     "imageUrl": "",
     "imagesUrl": [],
   })
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (type === "create") {
@@ -125,10 +126,11 @@ export default function ProductModal({ closeModal, getProduct, type, product }) 
       getProduct();
       closeModal();
       handleReset();
-      handleSuccessMessage(dispatch, res)
+      dispatch(createMsgThunk(res.data))
+      // handleSuccessMessage(dispatch, res)
       console.log(res)
     } catch (error) {
-      handleErrorMessage(dispatch, error)
+      // handleErrorMessage(dispatch, error)
       closeModal();
 
       console.log(error)

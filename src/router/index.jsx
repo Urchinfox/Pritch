@@ -4,50 +4,65 @@ import Home from "../pages/front/Home";
 import Products from "../pages/front/Products";
 import ProductDetail from "../pages/front/ProductDetail";
 import Login from "../pages/Login";
-import Dashboard from "../pages/admin/DashBoard";
-import AdminProduct from "../pages/admin/adminProduct";
-import Cart from "../components/Cart";
+import Dashboard from "../pages/admin/Dashboard";
+import AdminProduct from "../pages/admin/AdminProduct";
+import Cart from "../pages/front/Cart";
+import Checkout from "../pages/front/Checkout";
+import OrderSuccess from "../pages/front/OrderSuccess";
+import NotFound from "../components/NotFound";
 
 const routers = createHashRouter([
     {
-        path:'/',
-        element: <FrontLayout/>,
-        children:[
+        path: '/',
+        element: <FrontLayout />,
+        children: [
             {
-                path:'',
-                element:<Home/>,
+                path: '',
+                element: <Home />,
             },
             {
-                path:'products',
-                element:<Products/>,
+                path: 'products',
+                element: <Products />,
             },
             {
-                path:'/products/:id',
-                element:<ProductDetail/>
+                path: '/products/:id',
+                element: <ProductDetail />
             },
             {
-                path:'cart',
+                path: 'cart',
                 element: <Cart />
+            },
+            {
+                path: 'checkout',
+                element: <Checkout />
+            },
+            {
+                path: 'order/:id',
+                element: <OrderSuccess />
+            },
+            {
+                path: '*',
+                element: <NotFound />
             }
         ]
     },
     {
-        path:'login',
-        element:<Login/>,
+        path: 'login',
+        element: <Login />,
     },
     {
-        path:'/admin',
-        element:<Dashboard/>,
-        children:[
+        path: '/admin',
+        element: <Dashboard />,
+        children: [
             {
-                path:'products',
-                element:<AdminProduct/>
+                path: 'products',
+                element: <AdminProduct />
             }
         ]
     }
 ])
 
-const AppRouter = () =>{
+const AppRouter = () => {
     return <RouterProvider router={routers} />
 }
 

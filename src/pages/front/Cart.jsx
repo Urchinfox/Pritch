@@ -1,76 +1,77 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Loading from "./Loading";
+import Loading from "../../components/Loading";
+import { useDispatch } from "react-redux";
+import { cartHint } from "../../slices/cartMessageSlice";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
     const [cartItems, setCartItems] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [loadingAry, setLoadingAry] = useState([]);
-    
-    const getCartItem = async() =>{
+    const dispatch = useDispatch()
 
-        if(loadingAry.length > 0){
+    const getCartItem = async () => {
+
+        if (loadingAry.length > 0) {
             setIsLoading(true)
         }
         try {
             const res = await axios.get(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/cart`);
-
-            console.log('cartitem' , res.data.data.carts);
+            dispatch(cartHint(res.data.data.carts))
             setCartItems(res.data.data.carts);
 
         } catch (error) {
             console.log(error);
-        }finally{
+        } finally {
             setIsLoading(false)
         }
     };
 
-    const removerCartItem = async(id) =>{
+    const removerCartItem = async (id) => {
         setIsLoading(true)
         try {
             const res = await axios.delete(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/cart/${id}`)
             getCartItem()
-            console.log(res)
         } catch (error) {
             console.log(error)
-        }finally{
+        } finally {
             setIsLoading(false)
         }
     }
 
-            // 從 localStorage 
-            // const a = localStorage.getItem('size');
-    
-            // localStorage 取出資料轉成物件
-            // const b = JSON.parse(a);
-        
-            // 顯示資料
-            // console.log(b);
+    // 從 localStorage 
+    // const a = localStorage.getItem('size');
 
-    useEffect(()=>{
+    // localStorage 取出資料轉成物件
+    // const b = JSON.parse(a);
+
+    // 顯示資料
+    // console.log(b);
+
+    useEffect(() => {
         getCartItem();
-    },[])
+    }, [])
 
-    const changeQuantity = async(id,qty,type) => {
+    const changeQuantity = async (id, qty, type) => {
         const data = {
             "data": {
-              "product_id": id,
-              "qty": type === 'plus'? qty + 1 : qty - 1
+                "product_id": id,
+                "qty": type === 'plus' ? qty + 1 : qty - 1
             }
-          }
-          setLoadingAry((pre)=>{
-            return [...pre,id]
-          })
-          
+        }
+        setLoadingAry((pre) => {
+            return [...pre, id]
+        })
+
         try {
-            const res = await axios.put(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/cart/${id}`,data)
+            const res = await axios.put(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/cart/${id}`, data)
             getCartItem();
-            console.log(res)
         } catch (error) {
             console.log(error);
-        }finally{
-            setLoadingAry((pre)=>{
-                return pre.filter((itemId)=> itemId !== id);
+        } finally {
+            setLoadingAry((pre) => {
+                return pre.filter((itemId) => itemId !== id);
             })
         }
     };
@@ -105,14 +106,14 @@ const Cart = () => {
                                         <td>{item.product.title}</td>
                                         <td>
                                             <div className="d-flex align-items-center justify-content-center">
-                                                <button className="btn btn-sm btn-outline-secondary" disabled={item.qty===1} onClick={() => changeQuantity(item.id,item.qty,'minus')}    
+                                                <button className="btn btn-sm btn-outline-secondary" disabled={item.qty === 1} onClick={() => changeQuantity(item.id, item.qty, 'minus')}
                                                 >
-                                                {loadingAry.includes(item.id) ? <span class="spinner-grow spinner-grow-sm"></span> : '-'}
+                                                    {loadingAry.includes(item.id) ? <span className="spinner-grow spinner-grow-sm"></span> : '-'}
                                                 </button>
-                                                
+
                                                 <span className="mx-2">{item.qty}</span>
-                                                <button className="btn btn-sm btn-outline-secondary" onClick={() => changeQuantity(item.id,item.qty,'plus')}>
-                                                {loadingAry.includes(item.id) ? <span class="spinner-grow spinner-grow-sm"></span> : '+'}
+                                                <button className="btn btn-sm btn-outline-secondary" onClick={() => changeQuantity(item.id, item.qty, 'plus')}>
+                                                    {loadingAry.includes(item.id) ? <span className="spinner-grow spinner-grow-sm"></span> : '+'}
                                                 </button>
                                             </div>
                                         </td>
@@ -126,14 +127,14 @@ const Cart = () => {
                             </tbody>
                         </table>
                         <div className="text-end">
-                            <h4>Total: ${cartItems.reduce((acc,cur)=> acc + cur.final_total,0)}</h4>
+                            <h4>Total: ${cartItems.reduce((acc, cur) => acc + cur.final_total, 0)}</h4>
                         </div>
                     </div>
                 </div>
             )}
-                <div className="text-end">
-                    <button className="btn btn-primary">Proceed to Checkout</button>
-                </div>
+            <div className="text-end">
+                <Link to="/checkout" className="btn btn-primary">Proceed to Checkout</Link>
+            </div>
         </div>
     );
 };

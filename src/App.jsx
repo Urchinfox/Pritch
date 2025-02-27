@@ -1,3 +1,5 @@
+import { Provider } from 'react-redux';
+import { cartStore } from './store/store.js';
 import './assets/scss/all.scss'
 import AppRouter from './router/index.jsx';
 
@@ -5,9 +7,9 @@ function App() {
 
 
   return (
-    <>
-    <AppRouter />      
-    </>
+    <Provider store={cartStore}>
+      <AppRouter />      
+    </Provider>
   )
 }
 

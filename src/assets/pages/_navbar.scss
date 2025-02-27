@@ -1,0 +1,31 @@
+/* 購物車數量顯示 */
+.cart-msg {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .cart-animate {
+    animation: shake 0.3s ease-in-out, scaleUpDown 0.5s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+  }
+  
+  @keyframes scaleUpDown {
+    0% { transform: scale(1); }
+    50% { transform: scale(2); }
+    100% { transform: scale(1); }
+  }
+  

@@ -38,7 +38,7 @@ export default function Dashboard(){
     
 
 
-    return(<messageContext.Provider value={reducer}>
+    return(<>
             <nav className='navbar navbar-expand-lg bg-dark'>
                 <div className='container-fluid'>
                 <h1 className='text-white mb-0'>Pritch 後台管理系統</h1>
@@ -977,5 +977,9 @@ export default function Dashboard(){
             </div>
     
     
-    </messageContext.Provider>)
+    </>)
 }
+
+
+
+// messageContext.Provider value={reducer}

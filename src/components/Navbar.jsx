@@ -1,5 +1,15 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 export default function Navbar(){
+
+    const [animate, setAnimate] = useState(false)
+    const message = useSelector((state)=> state.cartMsg.length)
+    useEffect(() => {
+            setAnimate(true);
+            setTimeout(() => setAnimate(false), 2000);
+        
+    }, [message]);
     return (
         <header className="px-7">
         <nav>
@@ -16,7 +26,15 @@ export default function Navbar(){
             </li>
             <li>
                 <ul className="list-unstyled d-flex align-items-center">
-                    <li className="me-5"><NavLink to='cart' className="py-6"><i className="bi bi-bag"></i></NavLink></li>
+                    <li className="me-5 ">
+                        <NavLink to='cart' className="py-6">
+                            <i className="bi bi-bag position-relative">
+                                <span className={`cart-msg d-flex align-items-center justify-content-center ${animate ? "cart-animate" : ""}`}>
+                                    {message}
+                                </span>
+                            </i>
+                        </NavLink>
+                    </li>
                     <li className="d-lg-block d-none me-5"><a href="#"><i className="bi bi-search"></i></a></li>
                     <li className="me-5"><a href="#"><i className="bi bi-person-circle"></i></a></li>
                     <li>
@@ -39,6 +57,7 @@ export default function Navbar(){
                                         <div>
                                             <NavLink to='/' className="d-block mb-7"><i className=" me-2 bi bi-person-circle"></i>會員資料</NavLink>
                                             <NavLink to='cart' className="d-block"><i className=" me-2 bi bi-cart"></i>購物車</NavLink>
+                                            
                                         </div>
                                     </li>
                                 </ul>
