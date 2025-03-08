@@ -3,7 +3,11 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Loading from "../../components/Loading";
+
 export default function Checkout() {
+    const [isLoading, setIsloading] = useState(false)
+
     const navigate = useNavigate();
 
     const Input = ({ register, errors, rules, id, type, label, placeholder }) => {
@@ -64,8 +68,8 @@ export default function Checkout() {
                 "message": "none"
             }
         }
-        console.log(data)
         try {
+            setIsloading(true)
             const res = await axios.post(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/order`, data)
             console.log('order', res);
             const ordeId = (res.data.orderId)
@@ -74,6 +78,8 @@ export default function Checkout() {
 
         } catch (error) {
             console.log(error);
+        } finally {
+            setIsloading(false)
         }
         reset();
     }
@@ -95,6 +101,7 @@ export default function Checkout() {
 
     return (<>
         <div className="container mt-5 mb-10">
+            <Loading isLoading={isLoading} />
             <div className="row">
                 <div className="col-md-7">
                     <div className="card shadow mb-5">

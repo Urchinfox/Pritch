@@ -14,19 +14,19 @@ export default function Products() {
     const [hover, setHover] = useState();
     const [product, setProduct] = useState([]);
     const [pagination, setPagination] = useState({});
-    const [isLoading , setIsloading] = useState(false)
+    const [isLoading, setIsloading] = useState(false)
 
     const getProduct = async (page = 1) => {
         try {
             setIsloading(true)
             const resProduct = await axios.get(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/products?page=${page}`)
-            console.log(resProduct)
+            console.log(resProduct.data.products)
             setProduct(resProduct.data.products)
             setPagination(resProduct.data.pagination)
-            
+
         } catch (error) {
             console.log(error)
-        }finally{
+        } finally {
             setIsloading(false)
         }
     }
@@ -74,7 +74,7 @@ export default function Products() {
                                     <Link to={`/products/${item.id}`}>
                                         <div className="mb-4 shop-product-test" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} >
                                             {
-                                              <img src={item.imageUrl} width={377} height={518} alt="" />
+                                                <img src={item.imageUrl} width={377} height={518} alt="" />
                                             }
                                         </div>
                                         <div className="text-center">
@@ -90,7 +90,7 @@ export default function Products() {
 
                 </div>
                 <nav>
-                    <Pagination pagination={pagination} getProduct={getProduct} />
+                    <Pagination pagination={pagination} getProduct={getProduct} type='productPage' />
                 </nav>
             </div>
         </main>

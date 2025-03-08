@@ -16,9 +16,9 @@ export default function OrderSuccess() {
         try {
             const res = await axios.get(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/order/${id}`)
             const productAry = Object.values(res.data.order.products)
-
             setOrder(productAry);
             setUser(res.data.order.user)
+
             console.log(res)
         } catch (error) {
             console.log(error)

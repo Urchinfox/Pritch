@@ -10,6 +10,8 @@ import Cart from "../pages/front/Cart";
 import Checkout from "../pages/front/Checkout";
 import OrderSuccess from "../pages/front/OrderSuccess";
 import NotFound from "../components/NotFound";
+import Order from "../pages/admin/Order";
+import Coupon from "../pages/admin/Coupon";
 
 const routers = createHashRouter([
     {
@@ -57,6 +59,14 @@ const routers = createHashRouter([
             {
                 path: 'products',
                 element: <AdminProduct />
+            },
+            {
+                path: 'orders',
+                element: <Order />
+            },
+            {
+                path: 'coupon',
+                element: <Coupon />
             }
         ]
     }
