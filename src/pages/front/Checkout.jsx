@@ -7,6 +7,10 @@ import Loading from "../../components/Loading";
 
 export default function Checkout() {
     const [isLoading, setIsloading] = useState(false)
+    const [coupon, setCoupon] = useState();
+    const [discount, setDiscount] = useState(0);
+    const [couponError, setCouponError] = useState('');
+
 
     const navigate = useNavigate();
 
@@ -43,6 +47,7 @@ export default function Checkout() {
 
         </>)
     }
+
 
     const {
         register,
@@ -98,6 +103,29 @@ export default function Checkout() {
     useEffect(() => {
         getCartItem();
     }, [])
+
+    const handleCoupon = (e) => {
+        setCoupon(e.target.value)
+    }
+    const submitCoupon = async (code) => {
+        const data = {
+            "data": {
+                "code": code
+            }
+        }
+        try {
+            const res = await axios.post(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/coupon`, data)
+            setDiscount(res.data.data.final_total);
+            // const total = cartItem.reduce((acc, cur) => acc + cur.total, 0);
+            // console.log(discount / total);
+            console.log(res);
+        } catch (error) {
+            setCouponError(error.response.data.message)
+            console.log(error.response.data.message)
+        }
+    }
+
+
 
     return (<>
         <div className="container mt-5 mb-10">
@@ -224,9 +252,20 @@ export default function Checkout() {
 
                                 </tbody>
                             </table>
+                            {discount !== 0 ? <div className="alert alert-primary">
+                                Discount coupon applied! {100 - (discount / cartItem.reduce((acc, cur) => acc + cur.total, 0)) * 100}%Off
+                            </div> : null}
+                            {discount === 0 ? <div className="d-flex align-items-center gap-2 my-3">
+                                <input type="text" className="form-control" placeholder="Enter Coupon Code (coupon000)" onChange={handleCoupon} />
+                                <button className="btn btn-outline-primary" onClick={() => submitCoupon(coupon)}>Apply</button>
+                            </div> : null}
+                            {
+                                couponError && discount === 0 ? (<span className="text-danger fs-8">Coupon not found or has expired</span>) : ''
+                            }
                             <div className="text-end">
-                                <h4>Total: {cartItem.reduce((acc, cur) => acc + cur.total, 0)}</h4>
+                                <h4>Total: ${Math.floor(cartItem.reduce((acc, cur) => discount ? discount : acc + cur.total, 0))}</h4>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -237,3 +276,6 @@ export default function Checkout() {
 
     </>)
 }
+
+
+// {discount === 0 ? (<td>Coupon : </td>):}

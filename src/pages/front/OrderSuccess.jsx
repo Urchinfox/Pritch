@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { useParams } from "react-router-dom"
 import axios from "axios";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function OrderSuccess() {
@@ -10,6 +9,7 @@ export default function OrderSuccess() {
     const [order, setOrder] = useState();
     const [user, setUser] = useState();
     const navigate = useNavigate()
+    const [discount, setDiscount] = useState(0);
 
 
     const getOrder = async (id) => {
@@ -18,8 +18,8 @@ export default function OrderSuccess() {
             const productAry = Object.values(res.data.order.products)
             setOrder(productAry);
             setUser(res.data.order.user)
+            console.log(productAry)
 
-            console.log(res)
         } catch (error) {
             console.log(error)
             setTimeout(() => {
@@ -59,6 +59,8 @@ export default function OrderSuccess() {
                                     <table className="table align-middle">
                                         <thead>
                                             <tr className="text-center">
+                                                {order.some(item => item.hasOwnProperty('coupon')) ? <th scope="col">Discount</th>
+                                                    : null}
                                                 <th scope="col">Product</th>
                                                 <th scope="col">Qty</th>
                                                 <th>Unit Price</th>
@@ -66,21 +68,27 @@ export default function OrderSuccess() {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr className="text-center">
-                                                {order?.map((item) => {
-                                                    return (<React.Fragment key={item.id}>
+                                            {order?.map((item) => {
+                                                return (<>
+                                                    <tr className="text-center" key={item.id}>
+                                                        {
+                                                            item?.coupon?.percent > 0 ? <td><span class="badge bg-success ms-3">{item?.coupon?.percent} Off</span></td>
+                                                                : null
+                                                        }
                                                         <td>{item.product.title}</td>
                                                         <td>{item.qty}</td>
                                                         <td>{item.product.price}</td>
-                                                        <td>{item.total}</td>
-                                                    </React.Fragment>)
-                                                })}
+                                                        <td>{Math.floor(item.final_total)}
+                                                        </td>
+                                                    </tr>
 
-                                            </tr>
+                                                </>)
+                                            })}
+
                                         </tbody>
                                     </table>
                                     <div className="text-end">
-                                        <h4>Total:${order?.reduce((acc, cur) => acc + cur.total, 0)}</h4>
+                                        <h4>Total:${Math.floor(order?.reduce((acc, cur) => acc + cur.final_total, 0))}</h4>
                                     </div>
                                 </div>
                             </div>
