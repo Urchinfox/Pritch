@@ -1,8 +1,6 @@
-import { get } from "react-hook-form";
-
 export default function Pagination({ pagination, getProduct, getOrder, type }) {
   return (
-    <nav aria-label='Page navigation example'>
+    <nav >
       <ul className='pagination justify-content-center'>
         <li className='page-item'>
           <a className={`page-link ${!pagination?.has_pre ? 'disabled' : ''}`}

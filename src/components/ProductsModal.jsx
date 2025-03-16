@@ -103,7 +103,7 @@ export default function ProductModal({ closeModal, getProduct, type, product }) 
       console.log("Upload success:", res.data);
       setTempProduct((prev) => ({
         ...prev,
-        imagesUrl: [...prev.imagesUrl, res.data.imageUrl],
+        imagesUrl: Array.isArray(prev.imagesUrl) ? [...prev.imagesUrl, res.data.imageUrl] : [res.data.imageUrl],
       }));
     } catch (error) {
       console.error("Upload failed:", error.response?.data || error.message);
@@ -176,9 +176,9 @@ export default function ProductModal({ closeModal, getProduct, type, product }) 
                     />
                   </label>
                   {
-                    tempProduct.imagesUrl && tempProduct.imagesUrl.map(item=>{
-                      return(<>
-                        <img src={item} width={100} height={100} alt="" />
+                    tempProduct.imagesUrl && tempProduct.imagesUrl.map(item => {
+                      return (<>
+                        <img className="my-3" src={item} width={100} height={100} alt="" />
                       </>)
                     })
                   }
@@ -204,7 +204,7 @@ export default function ProductModal({ closeModal, getProduct, type, product }) 
                 <div className='row'>
                   <div className='form-group mb-2 col-md-6'>
                     <label className='w-100' htmlFor='category'>
-                      Category 
+                      Category
                       <input
                         type='text'
                         id='category'

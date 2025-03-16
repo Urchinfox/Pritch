@@ -9,7 +9,6 @@ export default function OrderSuccess() {
     const [order, setOrder] = useState();
     const [user, setUser] = useState();
     const navigate = useNavigate()
-    const [discount, setDiscount] = useState(0);
 
 
     const getOrder = async (id) => {
@@ -17,6 +16,7 @@ export default function OrderSuccess() {
             const res = await axios.get(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/order/${id}`)
             const productAry = Object.values(res.data.order.products)
             setOrder(productAry);
+
             setUser(res.data.order.user)
             console.log(productAry)
 
@@ -68,11 +68,11 @@ export default function OrderSuccess() {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {order?.map((item) => {
+                                            {order?.map((item, index) => {
                                                 return (<>
-                                                    <tr className="text-center" key={item.id}>
+                                                    <tr className="text-center" key={index}>
                                                         {
-                                                            item?.coupon?.percent > 0 ? <td><span class="badge bg-success ms-3">{item?.coupon?.percent} Off</span></td>
+                                                            item?.coupon?.percent > 0 ? <td><span className="badge bg-success ms-3">{100 - item?.coupon?.percent} Off</span></td>
                                                                 : null
                                                         }
                                                         <td>{item.product.title}</td>

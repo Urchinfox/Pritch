@@ -213,7 +213,7 @@ export default function Checkout() {
                                         }}
                                         id='payment'
                                     >
-                                        <option value="" disabled>Select a payment method</option> {/* 預設選項，讓用戶選擇 */}
+                                        <option value="" disabled>Select a payment method</option>
                                         <option>Credit Card</option>
                                         <option>PayPal</option>
                                         <option>Bank Transfer</option>
@@ -256,7 +256,7 @@ export default function Checkout() {
                                 Discount coupon applied! {100 - (discount / cartItem.reduce((acc, cur) => acc + cur.total, 0)) * 100}%Off
                             </div> : null}
                             {discount === 0 ? <div className="d-flex align-items-center gap-2 my-3">
-                                <input type="text" className="form-control" placeholder="Enter Coupon Code (coupon000)" onChange={handleCoupon} />
+                                <input type="text" className="form-control" placeholder="Ex:coupon1/2/3" onChange={handleCoupon} />
                                 <button className="btn btn-outline-primary" onClick={() => submitCoupon(coupon)}>Apply</button>
                             </div> : null}
                             {

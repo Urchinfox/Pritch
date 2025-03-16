@@ -20,8 +20,8 @@ export default function Products() {
         try {
             setIsloading(true)
             const resProduct = await axios.get(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/products?page=${page}`)
-            console.log(resProduct.data.products)
             setProduct(resProduct.data.products)
+            console.log(resProduct)
             setPagination(resProduct.data.pagination)
 
         } catch (error) {
@@ -40,13 +40,13 @@ export default function Products() {
     return (<>
         <section className="shop-banner mb-lg-13 mb-10">
             <div className="banner mb-lg-12 mb-6">
-                <img width="1920" height="500" src={productBanner} alt="..." />
+                <img width="1920" height="500" src='https://img-app-styleplus-ws.freetls.fastly.net/contents/banner/84.jpg?20250307092545' alt="..." />
             </div>
             <div className="px-lg-7 px-3">
-                <h2 className="mb-lg-6 mb-4 fs-lg-1 fs-5">秋冬 24 女裝系列</h2>
+                <h2 className="mb-lg-6 mb-4 fs-lg-1 fs-5">Women's Collection</h2>
                 <div className="fs-lg-6 fs-7">
-                    <p>探索PRITCH最新24秋冬女裝系列，靈感源於義大利先鋒藝術家LaviniaFontana，致敬他勇於突破社會規範。</p>
-                    <p>此系列宣揚獨立的價值，以及每人皆應該勇於做自己。</p>
+                    <p>Explore PRITCH's latest Fall/Winter 24 Women's Collection, inspired by Italian pioneer artist Lavinia Fontana, paying tribute to her courage in breaking societal norms.</p>
+                    <p>This collection celebrates the value of independence and encourages everyone to be bold in embracing their true selves</p>
                 </div>
             </div>
         </section>
@@ -55,20 +55,20 @@ export default function Products() {
             <div className="px-7 d-block d-lg-flex justify-content-between mb-6 mb-lg-0">
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb fs-lg-7 fs-8">
-                        <li className="breadcrumb-item text-gray"><a href="index.html">首頁</a></li>
+                        <li className="breadcrumb-item text-gray"><a href="index.html">Home</a></li>
                         <li className="breadcrumb-item text-gray"><a href="#">New In</a></li>
-                        <li className="breadcrumb-item active" aria-current="page">秋冬24女裝系列</li>
+                        <li className="breadcrumb-item active" aria-current="page">Women's Collection</li>
                     </ol>
                 </nav>
                 <div className="text-end fs-lg-7 fs-8">
-                    <button className="border-0 bg-transparent"><i className="bi bi-sort-down me-1"></i>排列</button>
-                    <button className="border-0 bg-transparent"><i className="bi bi-funnel-fill me-1"></i>篩選</button>
+                    <button className="border-0 bg-transparent"><i className="bi bi-sort-down me-1"></i>Sort</button>
+                    <button className="border-0 bg-transparent"><i className="bi bi-funnel-fill me-1"></i>Filter</button>
                 </div>
             </div>
             <div className="container-fluid ">
                 <div className="row row-cols-lg-5 row-cols-2 gy-lg-12 gy-10 gx-lg-1 gx-0 mb-lg-10 mb-6" data-times="3">
                     {
-                        product.map((item, index) => {
+                        product.map((item) => {
                             return (
                                 <div className="col" key={item.id}>
                                     <Link to={`/products/${item.id}`}>

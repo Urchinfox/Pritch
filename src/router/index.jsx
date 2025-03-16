@@ -12,6 +12,7 @@ import OrderSuccess from "../pages/front/OrderSuccess";
 import NotFound from "../components/NotFound";
 import Order from "../pages/admin/Order";
 import Coupon from "../pages/admin/Coupon";
+import StylistDetail from "../pages/front/StylistDetail";
 
 const routers = createHashRouter([
     {
@@ -45,6 +46,10 @@ const routers = createHashRouter([
             {
                 path: '*',
                 element: <NotFound />
+            },
+            {
+                path: 'stylist/:id',
+                element: <StylistDetail />
             }
         ]
     },

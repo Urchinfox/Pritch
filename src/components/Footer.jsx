@@ -7,18 +7,18 @@ export default function Footer() {
                         <h2>PRITCH</h2>
                     </div>
                     <div className="col-lg-3 col-12 mb-7 mb-lg-0">
-                        <p className="fw-bold">快速連結</p>
+                        <p className="fw-bold">Quick Links</p>
                         <div className="row">
                             <div className="col-6">
                                 <div className="mt-3">
-                                    <a href="#" className="text-white d-block">新品上市</a>
-                                    <a href="#" className="text-white d-block">預約造型諮詢</a>
+                                    <a href="#" className="text-white d-block">New Arrival</a>
+                                    <a href="#" className="text-white d-block">Styling Consultation</a>
                                 </div>
                             </div>
                             <div className="col-6">
                                 <div className="mt-3">
-                                    <a href="#" className="text-white d-block">常見問題</a>
-                                    <a href="#" className="text-white d-block">網站地圖</a>
+                                    <a href="#" className="text-white d-block">Q&A</a>
+                                    <a href="#" className="text-white d-block">Site Map</a>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +35,7 @@ export default function Footer() {
 
                     </div>
                     <div className="col-lg-3 col-12 mb-7 mb-lg-0">
-                        <p className="fw-bold">聯絡我們</p>
+                        <p className="fw-bold">Contact</p>
                         <div className="row d-flex d-lg-none mt-3">
                             <div className="col-6">
                                 <a href="mailto:info@pritch.com" className="d-block text-white">info@pritch.com</a>

@@ -86,46 +86,53 @@ const Cart = () => {
             ) : (
                 <div className="card shadow mb-5">
                     <div className="card-body">
-                        <table className="table align-middle">
-                            <thead>
-                                <tr className="text-center">
-                                    <th scope="col"></th>
-                                    <th scope="col">Product</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Total</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {cartItems.map((item) => (
-                                    <tr key={item.id} className="text-center">
-                                        <td>
-                                            <img src={item.product.imageUrl} alt={item.product.title} className="" width={50} height={50} />
-                                        </td>
-                                        <td>{item.product.title}</td>
-                                        <td>
-                                            <div className="d-flex align-items-center justify-content-center">
-                                                <button className="btn btn-sm btn-outline-secondary" disabled={item.qty === 1} onClick={() => changeQuantity(item.id, item.qty, 'minus')}
-                                                >
-                                                    {loadingAry.includes(item.id) ? <span className="spinner-grow spinner-grow-sm"></span> : '-'}
-                                                </button>
-
-                                                <span className="mx-2">{item.qty}</span>
-                                                <button className="btn btn-sm btn-outline-secondary" onClick={() => changeQuantity(item.id, item.qty, 'plus')}>
-                                                    {loadingAry.includes(item.id) ? <span className="spinner-grow spinner-grow-sm"></span> : '+'}
-                                                </button>
-                                            </div>
-                                        </td>
-                                        <td>${item.product.price}</td>
-                                        <td>${item.product.price * item.qty}</td>
-                                        <td>
-                                            <button className="btn btn-sm btn-danger" onClick={() => removerCartItem(item.id)}>Remove</button>
-                                        </td>
+                        <div className="table-responsive">
+                            <table className="table align-middle">
+                                <thead>
+                                    <tr className="text-center">
+                                        <th scope="col" className="d-none d-sm-table-cell"></th>
+                                        <th scope="col">Product</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col"></th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    {cartItems.map((item) => (
+                                        <tr key={item.id} className="text-center">
+                                            <td className="d-none d-sm-table-cell">
+                                                <img src={item.product.imageUrl} alt={item.product.title} width={50} height={50} />
+                                            </td>
+                                            <td>{item.product.title}</td>
+                                            <td>
+                                                <div className="d-flex align-items-center justify-content-center">
+                                                    <button
+                                                        className="border-0"
+                                                        disabled={item.qty === 1}
+                                                        onClick={() => changeQuantity(item.id, item.qty, 'minus')}
+                                                    >
+                                                        {loadingAry.includes(item.id) ? <span className="spinner-grow spinner-grow-sm"></span> : '-'}
+                                                    </button>
+                                                    <span className="mx-2">{item.qty}</span>
+                                                    <button
+                                                        className="border-0"
+                                                        onClick={() => changeQuantity(item.id, item.qty, 'plus')}
+                                                    >
+                                                        {loadingAry.includes(item.id) ? <span className="spinner-grow spinner-grow-sm"></span> : '+'}
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td>${item.product.price}</td>
+                                            <td>${item.product.price * item.qty}</td>
+                                            <td>
+                                                <button className="btn btn-sm btn-danger" onClick={() => removerCartItem(item.id)}>Remove</button>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
                         <div className="text-end">
                             <h4>Total: ${cartItems.reduce((acc, cur) => acc + cur.final_total, 0)}</h4>
                         </div>
@@ -136,6 +143,7 @@ const Cart = () => {
                 <Link to="/checkout" className="btn btn-primary">Proceed to Checkout</Link>
             </div>
         </div>
+
     );
 };
 

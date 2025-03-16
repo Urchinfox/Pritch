@@ -3,7 +3,7 @@ import { useEffect, useReducer } from "react";
 import { Link, Outlet } from "react-router-dom";
 import Message from "../../components/Message";
 import { useNavigate } from "react-router-dom";
-import { initState, messageContext, messageReducer } from "../../store/MessageStore";
+import { initState, messageReducer } from "../../store/MessageStore";
 
 export default function Dashboard() {
     const reducer = useReducer(messageReducer, initState);

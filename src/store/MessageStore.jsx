@@ -4,56 +4,56 @@ import { createContext } from "react"
 export const messageContext = createContext({});
 
 export const initState = {
-    type:'',
-    title:'',
-    txt:''
+    type: '',
+    title: '',
+    txt: ''
 }
-export const messageReducer = (state,action) =>{
+export const messageReducer = (state, action) => {
     switch (action.type) {
         case 'POST_MESSAGE':
-            return{
+            return {
                 ...action.payload
             }
-        case 'CLEAR_MESSAGE' :
+        case 'CLEAR_MESSAGE':
             return initState;
-    
+
         default:
-            return initial;
+            return initState;
     }
 }
 
 
-export function handleSuccessMessage(dispatch, res){
+export function handleSuccessMessage(dispatch, res) {
     dispatch({
-        type:'POST_MESSAGE',
-        payload:{
-          type:'gray',
-          title:'Success',
-          txt : '更新成功'
+        type: 'POST_MESSAGE',
+        payload: {
+            type: 'gray',
+            title: 'Success',
+            txt: '更新成功'
         }
     })
 
     setTimeout(() => {
         dispatch({
-            type:'CLEAR_MESSAGE',
+            type: 'CLEAR_MESSAGE',
         })
     }, 3000);
 
 }
 
-export function handleErrorMessage(dispatch,error){
+export function handleErrorMessage(dispatch, error) {
     dispatch({
-        type:'POST_MESSAGE',
-        payload:{
+        type: 'POST_MESSAGE',
+        payload: {
             type: 'danger',
-            title:'Fail',
+            title: 'Fail',
             txt: Array.isArray(error?.response?.data?.message) ? error?.response?.data?.message.join(',') : error?.response?.data?.message
         }
     })
 
     setTimeout(() => {
         dispatch({
-            type:'CLEAR_MESSAGE',
+            type: 'CLEAR_MESSAGE',
         })
     }, 3000);
 }
