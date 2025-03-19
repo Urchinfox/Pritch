@@ -7,20 +7,149 @@ import { cartHint } from "../../slices/cartMessageSlice";
 
 
 export default function ProductDetail() {
+    const extraImg = [
+        {
+            id: '-OLSgc4Ip85aYamboMc7',
+            images: [
+                {
+                    src: 'https://shirai.itembox.design/product/153/000000015305/000000015305-03-l.jpg?t=20250317111949', alt: 'Image 1'
+                },
+                {
+                    src: 'https://shirai.itembox.design/product/153/000000015305/000000015305-02-l.jpg?t=20250317111949', alt: 'Image 2'
+                },
+                {
+                    src: 'https://shirai.itembox.design/product/153/000000015305/000000015305-05-l.jpg?t=20250317111949', alt: 'Image3'
+                }
+            ]
+        },
+        {
+            id: "-OLT7NfB3-nkFRrjQCd4",
+            images: [
+                { src: 'https://shirai.itembox.design/product/150/000000015045/000000015045-02-l.jpg?t=20250317111949', alt: 'Design 1' },
+                { src: 'https://shirai.itembox.design/product/150/000000015045/000000015045-01-l.jpg?t=20250317111949', alt: 'Design 2' },
+                {
+                    src: 'https://shirai.itembox.design/product/150/000000015045/000000015045-03-l.jpg?t=20250317111949', alt: 'Design 2'
+                },
+            ]
+        },
+        {
+            id: "-OLT6VtgYyGYWY8ZR9yE",
+            images: [
+                { src: 'https://shirai.itembox.design/product/119/000000011902/000000011902-01-l.jpg?t=20250317111949', alt: 'Design 1' },
+                { src: 'https://shirai.itembox.design/product/119/000000011902/000000011902-13-l.jpg?t=20250317111949', alt: 'Design 2' },
+            ]
+        },
+        {
+            id: "-OLSwYdO8bST22YalL7A",
+            images: [
+                { src: 'https://shirai.itembox.design/product/150/000000015015/000000015015-02-l.jpg?t=20250317111949', alt: 'Design 1' },
+                { src: 'https://shirai.itembox.design/product/150/000000015015/000000015015-06-l.jpg?t=20250317111949', alt: 'Design 2' },
+            ]
+        },
+        {
+            id: "-OLSlOn4u9WL05IGWgiI",
+            images: [
+                { src: 'https://shirai.itembox.design/product/150/000000015011/000000015011-05-l.jpg?t=20250317111949', alt: 'Design 1' },
+                { src: 'https://shirai.itembox.design/product/150/000000015011/000000015011-07-l.jpg?t=20250317111949', alt: 'Design 2' },
+            ]
+        },
+        {
+            id: "-OLSkpAn4Dwhs-lJSYNA",
+            images: [
+                { src: 'https://shirai.itembox.design/product/147/000000014728/000000014728-06-l.jpg?t=20250318170753', alt: 'Design 1' },
+                { src: 'https://shirai.itembox.design/product/147/000000014728/000000014728-01-s.jpg?t=20250318170753', alt: 'Design 2' },
+            ]
+        },
+        {
+            id: "-OLSkIhprCCzggUXe3h6",
+            images: [
+                { src: 'https://shirai.itembox.design/product/138/000000013849/000000013849-06-l.jpg?t=20250318170753', alt: 'Design 1' },
+                { src: 'https://shirai.itembox.design/product/138/000000013849/000000013849-01-l.jpg?t=20250318170753', alt: 'Design 2' },
+            ]
+        },
+        {
+            id: "-OLSjg2dylNT_G26xshC",
+            images: [
+                { src: 'https://shirai.itembox.design/product/150/000000015048/000000015048-01-l.jpg?t=20250318170753', alt: 'Design 1' },
+                { src: 'https://shirai.itembox.design/product/150/000000015048/000000015048-07-l.jpg?t=20250318170753', alt: 'Design 2' },
+            ]
+        },
+        {
+            id: "-OLSj4Ex7nV5r8AfWsvP",
+            images: [
+                { src: 'https://shirai.itembox.design/product/147/000000014748/000000014748-01-l.jpg?t=20250318170753', alt: 'Design 1' },
+                { src: 'https://shirai.itembox.design/product/147/000000014748/000000014748-05-l.jpg?t=20250318170753', alt: 'Design 2' },
+                { src: 'https://shirai.itembox.design/product/147/000000014748/000000014748-06-l.jpg?t=20250318170753', alt: 'Design 2' },
+            ]
+        },
+        {
+            id: "-OLSht6F_-Yn6uhcUZF4",
+            images: [
+                { src: 'https://shirai.itembox.design/product/119/000000011915/000000011915-01-l.jpg?t=20250318170753', alt: 'Design 1' },
+                { src: 'https://shirai.itembox.design/product/119/000000011915/000000011915-03-l.jpg?t=20250318170753', alt: 'Design 2' },
+            ]
+        },
+        {
+            id: "-OLShQ1L9WlI5O-qMNzK",
+            images: [
+                { src: 'https://shirai.itembox.design/product/153/000000015304/000000015304-01-l.jpg?t=20250318170753', alt: 'Design 1' },
+                { src: 'https://shirai.itembox.design/product/153/000000015304/000000015304-04-l.jpg?t=20250318170753', alt: 'Design 2' },
+                { src: 'https://shirai.itembox.design/product/153/000000015304/000000015304-03-l.jpg?t=20250318170753', alt: 'Design 2' },
+                { src: 'https://shirai.itembox.design/product/153/000000015304/000000015304-05-l.jpg?t=20250318170753', alt: 'Design 2' },
+            ]
+        },
+        {
+            id: "-OLSfdarE1r-RC4XXeY7",
+            images: [
+                { src: 'https://shirai.itembox.design/product/150/000000015023/000000015023-01-l.jpg?t=20250318170753', alt: 'Design 1' },
+                { src: 'https://shirai.itembox.design/product/150/000000015023/000000015023-05-l.jpg?t=20250318170753', alt: 'Design 2' },
+            ]
+        },
+        {
+            id: "-OLSdsfljdyHRgCHKPVb",
+            images: [
+                { src: 'https://shirai.itembox.design/product/148/000000014885/000000014885-01-l.jpg?t=20250318170753', alt: 'Design 1' },
+                { src: 'https://shirai.itembox.design/product/148/000000014885/000000014885-07-l.jpg?t=20250318170753', alt: 'Design 2' },
+                { src: 'https://shirai.itembox.design/product/148/000000014885/000000014885-09-l.jpg?t=20250318170753', alt: 'Design 2' },
+            ]
+        },
+        {
+            id: "-OLIkqa9n1LFssKlNDp1",
+            images: [
+                { src: 'https://shirai.itembox.design/product/150/000000015019/000000015019-01-l.jpg?t=20250318170753', alt: 'Design 1' },
+                { src: 'https://shirai.itembox.design/product/150/000000015019/000000015019-04-l.jpg?t=20250318170753', alt: 'Design 2' },
+            ]
+        },
+
+
+
+
+
+
+
+
+
+
+    ]
     const [renderProduct, setRenderProduct] = useState([]);
     const { id } = useParams();
     const [size, setSize] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [images, setImages] = useState([]);
     const dispatch = useDispatch();
     const getProduct = async () => {
         try {
             const resProduct = await axios.get(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/products/all`)
             setRenderProduct(resProduct.data.products.filter((product) => product.id === id))
+            const productId = resProduct.data.products.filter((product) => product.id === id)
+            const productImg = extraImg.filter(item => item.id === productId[0].id)
+            setImages(productImg[0]?.images)
+
+
         } catch (error) {
             console.log(error)
         }
     }
-
 
     const getCartItem = async () => {
         try {
@@ -42,9 +171,8 @@ export default function ProductDetail() {
         }
         setIsLoading(true);
         try {
-            const res = await axios.post(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/cart`, data);
+            await axios.post(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/cart`, data);
             getCartItem();
-            console.log(res);
 
         } catch (error) {
             console.log(error);
@@ -62,24 +190,14 @@ export default function ProductDetail() {
             id: id,
             size: selectedSize
         }]);
-        console.log(selectedSize, id)
         localStorage.setItem('size', JSON.stringify(size));
 
     };
 
 
     useEffect(() => {
-        (async () => {
-            try {
-                const res = await axios.get(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/products`)
-                console.log(res)
-
-            } catch (error) {
-                console.log(error)
-            }
-        })()
         getProduct();
-    }, [])
+    }, [id])
 
 
     return (<>
@@ -92,7 +210,7 @@ export default function ProductDetail() {
                             return (<React.Fragment key={item.id}>
                                 <li className="breadcrumb-item text-gray" href="index.html" >Home</li>
                                 <li className="breadcrumb-item text-gray" href="#">New In</li>
-                                <li className="breadcrumb-item text-gray" href="shop.html">Women's Collection</li>
+                                <li className="breadcrumb-item text-gray" href="shop.html">Women&apos;s Collection</li>
                                 <li className="breadcrumb-item active">{item.title}</li>
                             </React.Fragment>)
                         })
@@ -104,18 +222,21 @@ export default function ProductDetail() {
         <section>
             <div className="container-fluid mb-lg-14 mb-12">
                 <div className="row">
-
                     <div className="col-lg-6 col-12 ">
                         <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                             <div className="carousel-inner">
                                 <div className="row g-1">
-                                    {renderProduct[0]?.imagesUrl?.map((item, index) => {
-                                        return (< >
-                                            <div className={`carousel-item col-6 ${index === 0 ? 'active' : ''}`} key={index}>
-                                                <img className="w-100" src={item} width={100} height={100} alt="..." />
+                                    {images && images.map((item, index) => {
+                                        return (
+                                            <div
+                                                className={`carousel-item col-6 ${index === 0 ? 'active' : ''}`}
+                                                key={index}
+                                            >
+                                                <img className="w-100" src={item.src} width={100} height={100} alt={item.alt} />
                                             </div>
-                                        </>)
+                                        )
                                     })}
+
                                 </div>
                             </div>
                             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -253,7 +374,6 @@ export default function ProductDetail() {
                             <div className="mb-4">
                                 <img className="w-100" src='https://video.visumo.jp/image/e4080400-170c-4cc2-9b5f-595fce145b54/713fdc1c-1126-4573-ab41-1d2afbd02903/713fdc1c-1126-4573-ab41-1d2afbd02903-large.jpg' width="377" height="518" alt="..." />
                             </div>
-
 
                         </a>
                     </div>

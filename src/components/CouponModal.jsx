@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
+
 
 export default function CouponModal({ couponTempData, close, editCoupon }) {
     const [couponForm, setCouponForm] = useState({
@@ -82,3 +84,29 @@ export default function CouponModal({ couponTempData, close, editCoupon }) {
         </div>
     );
 }
+
+
+CouponModal.propTypes = {
+    couponTempData: PropTypes.oneOfType([
+        PropTypes.arrayOf(
+            PropTypes.shape({
+                title: PropTypes.string,
+                is_enabled: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
+                percent: PropTypes.number,
+                due_date: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+                code: PropTypes.string,
+                id: PropTypes.string,
+            })
+        ),
+        PropTypes.shape({
+            title: PropTypes.string,
+            is_enabled: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
+            percent: PropTypes.number,
+            due_date: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+            code: PropTypes.string,
+            id: PropTypes.string,
+        })
+    ]),
+    close: PropTypes.func.isRequired,
+    editCoupon: PropTypes.func.isRequired,
+};

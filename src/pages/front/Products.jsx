@@ -1,5 +1,3 @@
-
-import productBanner from '../../assets/images/home/product-banner.jpeg'
 import { useEffect, useState } from 'react';
 import Pagination from '../../components/Pagination';
 import axios from 'axios';
@@ -11,7 +9,6 @@ import Loading from '../../components/Loading';
 
 
 export default function Products() {
-    const [hover, setHover] = useState();
     const [product, setProduct] = useState([]);
     const [pagination, setPagination] = useState({});
     const [isLoading, setIsloading] = useState(false)
@@ -21,7 +18,6 @@ export default function Products() {
             setIsloading(true)
             const resProduct = await axios.get(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/products?page=${page}`)
             setProduct(resProduct.data.products)
-            console.log(resProduct)
             setPagination(resProduct.data.pagination)
 
         } catch (error) {
@@ -43,9 +39,9 @@ export default function Products() {
                 <img width="1920" height="500" src='https://img-app-styleplus-ws.freetls.fastly.net/contents/banner/84.jpg?20250307092545' alt="..." />
             </div>
             <div className="px-lg-7 px-3">
-                <h2 className="mb-lg-6 mb-4 fs-lg-1 fs-5">Women's Collection</h2>
+                <h2 className="mb-lg-6 mb-4 fs-lg-1 fs-5">Women&apos;s Collection</h2>
                 <div className="fs-lg-6 fs-7">
-                    <p>Explore PRITCH's latest Fall/Winter 24 Women's Collection, inspired by Italian pioneer artist Lavinia Fontana, paying tribute to her courage in breaking societal norms.</p>
+                    <p>Explore PRITCH&apos;s latest Fall/Winter 24 Women&apos;s Collection, inspired by Italian pioneer artist Lavinia Fontana, paying tribute to her courage in breaking societal norms.</p>
                     <p>This collection celebrates the value of independence and encourages everyone to be bold in embracing their true selves</p>
                 </div>
             </div>
@@ -57,7 +53,7 @@ export default function Products() {
                     <ol className="breadcrumb fs-lg-7 fs-8">
                         <li className="breadcrumb-item text-gray"><a href="index.html">Home</a></li>
                         <li className="breadcrumb-item text-gray"><a href="#">New In</a></li>
-                        <li className="breadcrumb-item active" aria-current="page">Women's Collection</li>
+                        <li className="breadcrumb-item active" aria-current="page">Women&apos;s Collection</li>
                     </ol>
                 </nav>
                 <div className="text-end fs-lg-7 fs-8">
@@ -72,7 +68,7 @@ export default function Products() {
                             return (
                                 <div className="col" key={item.id}>
                                     <Link to={`/products/${item.id}`}>
-                                        <div className="mb-4 shop-product-test" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} >
+                                        <div className="mb-4 shop-product-test" >
                                             {
                                                 <img src={item.imageUrl} width={377} height={518} alt="" />
                                             }

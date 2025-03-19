@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { createMsgThunk } from "../slices/toastMeassgeSlice";
+import PropTypes from 'prop-types';
+
 
 export default function ProductModal({ closeModal, getProduct, type, product }) {
   const [tempProduct, setTempProduct] = useState({
@@ -121,14 +123,12 @@ export default function ProductModal({ closeModal, getProduct, type, product }) 
         api = `/v2/api/${import.meta.env.VITE_APP_API_PATH}/admin/product/${product.id}`;
 
       }
-      const res = await axios[method](api,
-        { data: tempProduct })
+      const res = await axios[method](api, { data: tempProduct })
       getProduct();
       closeModal();
       handleReset();
       dispatch(createMsgThunk(res.data))
       // handleSuccessMessage(dispatch, res)
-      console.log(res)
     } catch (error) {
       // handleErrorMessage(dispatch, error)
       closeModal();
@@ -176,10 +176,10 @@ export default function ProductModal({ closeModal, getProduct, type, product }) 
                     />
                   </label>
                   {
-                    tempProduct.imagesUrl && tempProduct.imagesUrl.map(item => {
-                      return (<>
-                        <img className="my-3" src={item} width={100} height={100} alt="" />
-                      </>)
+                    tempProduct.imagesUrl && tempProduct.imagesUrl.map((item, index) => {
+                      return (
+                        <img key={index} className="my-3" src={item} width={100} height={100} alt="" />
+                      )
                     })
                   }
                 </div>
@@ -324,3 +324,14 @@ export default function ProductModal({ closeModal, getProduct, type, product }) 
     </div>
   )
 }
+
+
+ProductModal.propTypes = {
+  closeModal: PropTypes.func,
+  getProduct: PropTypes.func,
+  type: PropTypes.string,
+  product: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+  })
+};

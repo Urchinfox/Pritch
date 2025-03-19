@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Loading from "../../components/Loading";
+import PropTypes from 'prop-types';
 
 export default function Checkout() {
     const [isLoading, setIsloading] = useState(false)
@@ -76,7 +77,6 @@ export default function Checkout() {
         try {
             setIsloading(true)
             const res = await axios.post(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/order`, data)
-            console.log('order', res);
             const ordeId = (res.data.orderId)
             getCartItem();
             navigate(`/order/${ordeId}`);
@@ -116,9 +116,7 @@ export default function Checkout() {
         try {
             const res = await axios.post(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/coupon`, data)
             setDiscount(res.data.data.final_total);
-            // const total = cartItem.reduce((acc, cur) => acc + cur.total, 0);
-            // console.log(discount / total);
-            console.log(res);
+
         } catch (error) {
             setCouponError(error.response.data.message)
             console.log(error.response.data.message)
@@ -278,4 +276,13 @@ export default function Checkout() {
 }
 
 
-// {discount === 0 ? (<td>Coupon : </td>):}
+Checkout.propTypes = {
+    register: PropTypes.func,
+    errors: PropTypes.object,
+    rules: PropTypes.object,
+    id: PropTypes.string,
+    type: PropTypes.string,
+    label: PropTypes.string,
+    placeholder: PropTypes.string,
+    children: PropTypes.node,
+};

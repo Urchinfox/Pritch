@@ -7,7 +7,6 @@ import { Modal } from "bootstrap";
 import Pagination from "../../components/Pagination";
 import { useDispatch } from "react-redux";
 import { createMsgThunk } from "../../slices/toastMeassgeSlice";
-import React from "react";
 
 export default function AdminProduct() {
     const [product, setProduct] = useState([]);
@@ -76,26 +75,14 @@ export default function AdminProduct() {
                     </div>
                 </div>
                 <div className="d-lg-flex justify-content-around ">
-                    <select className="form-select form-select-sm me-lg-3 me-0 mb-lg-0 mb-3">
-                        <option defaultValue={null}>主分類</option>
+                    <select className="form-select form-select-sm me-lg-3 me-0 mb-lg-0 mb-3" disabled>
+                        <option defaultValue={null}>Main Category</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
                     </select>
-                    <select className="form-select form-select-sm me-lg-3 me-0 mb-lg-0 mb-3">
-                        <option defaultValue={null}>次分類</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                    <select className="form-select form-select-sm me-lg-3 me-0 mb-lg-0 mb-3">
-                        <option defaultValue={null}>次分類</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                    <select className="form-select form-select-sm">
-                        <option defaultValue={null}>次分類</option>
+                    <select className="form-select form-select-sm me-lg-3 me-0 mb-lg-0 mb-3" disabled>
+                        <option defaultValue={null}>Subcategory</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -114,30 +101,32 @@ export default function AdminProduct() {
                     </tr>
                 </thead>
                 <tbody>
-                    <ProductModal closeModal={closeModal} getProduct={getProduct} type={type} product={tempProduct} />
-                    {tempProduct && <DeleteModal close={closeDeleteModal} txt={tempProduct.title} id={tempProduct.id} handleDelete={deleteProduct} />
-                    }
+
                     {product.map(product => {
-                        return (<React.Fragment key={product.id}>
-                            <tr className="align-middle">
+                        return (
+                            <tr className="align-middle" key={product.id}>
+
                                 <td scope="row">{product.title}
-                                    <div>
-                                        <button className=" me-1 btn btn-sm btn-secondary" type="button" onClick={() => openModal('edit', product)}>EDIT</button>
-                                        {/* <!-- Button trigger modal --> */}
-                                        <button className="btn btn-sm btn-danger" type="button" onClick={() => openDeleteModal(product)}>
-                                            DELETE
-                                        </button>
-                                    </div>
+                                    <br />
+                                    <button className=" me-1 btn btn-sm btn-secondary" type="button" onClick={() => openModal('edit', product)}>EDIT</button>
+                                    {/* <!-- Button trigger modal --> */}
+                                    <button className="btn btn-sm btn-danger" type="button" onClick={() => openDeleteModal(product)}>
+                                        DELETE
+                                    </button>
                                 </td>
                                 <td>{product.unit}</td>
                                 <td>${product.price}</td>
                                 <td>{product.category}</td>
                                 <td>{product.is_enabled ? 'Published' : 'Unpublished'}</td>
                             </tr>
-                        </React.Fragment>)
+                        )
                     })}
                 </tbody>
             </table>
+            <ProductModal closeModal={closeModal} getProduct={getProduct} type={type} product={tempProduct} />
+            {
+                tempProduct && <DeleteModal close={closeDeleteModal} txt={tempProduct.title} id={tempProduct.id} handleDelete={deleteProduct} />
+            }
         </div>
 
 

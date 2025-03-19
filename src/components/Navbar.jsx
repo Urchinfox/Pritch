@@ -46,17 +46,17 @@ export default function Navbar() {
                                     <div className="offcanvas-body">
                                         <div className="container">
                                             <ul className="list-unstyled d-flex flex-column test" style={{ height: '80vh' }}>
-                                                <li className="mb-7"><NavLink className="d-block" to='products'>New In</NavLink></li>
-                                                <li className="mb-7"><NavLink className="d-block" to='products'>Promotion</NavLink></li>
-                                                <li className="mb-7"><NavLink className="d-block" to='products'>緊身胸衣 / 腰帶</NavLink></li>
-                                                <li className="mb-7"><NavLink className="d-block" to='products'>大衣 / 外套</NavLink></li>
-                                                <li className="mb-7"><NavLink className="d-block" to='products'>上衣</NavLink></li>
-                                                <li className="mb-7"><NavLink className="d-block" to='products'>連身褲 / 褲子</NavLink></li>
-                                                <li><a className="d-block" href="#">洋裝 / 裙子</a></li>
+                                                <li className="mb-7"><NavLink className="d-block" to='/products'>New In</NavLink></li>
+                                                <li className="mb-7"><NavLink className="d-block" to='/products'>Promotion</NavLink></li>
+                                                <li className="mb-7"><NavLink className="d-block" to='/products'>Stockings</NavLink></li>
+                                                <li className="mb-7"><NavLink className="d-block" to='/products'>Coat / Overcoat</NavLink></li>
+                                                <li className="mb-7"><NavLink className="d-block" to='/products'>Top</NavLink></li>
+                                                <li className="mb-7"><NavLink className="d-block" to='/products'>Bottom</NavLink></li>
+                                                <li><NavLink className="d-block" to='/products'>Dress / Skirt</NavLink></li>
                                                 <li className="mt-auto">
                                                     <div>
                                                         <NavLink to='/' className="d-block mb-7"><i className=" me-2 bi bi-person-circle"></i>Member</NavLink>
-                                                        <NavLink to='cart' className="d-block"><i className=" me-2 bi bi-cart"></i>Cart</NavLink>
+                                                        <NavLink to='/cart' className="d-block"><i className=" me-2 bi bi-cart"></i>Cart</NavLink>
 
                                                     </div>
                                                 </li>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import { Modal } from 'bootstrap';
 import CouponModal from '../../components/CouponModal';
@@ -41,7 +41,7 @@ const Coupon = () => {
 
   const deleteCoupon = async (id) => {
     try {
-      const res = await axios.delete(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/admin/coupon/${id}`)
+      await axios.delete(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/admin/coupon/${id}`)
       getCoupon();
     } catch (error) {
       console.log(error)
@@ -90,7 +90,7 @@ const Coupon = () => {
       "data": couponForm
     }
     try {
-      const res = await axios.post(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/admin/coupon`, data)
+      await axios.post(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/admin/coupon`, data)
       getCoupon();
       handleReset()
     } catch (error) {
@@ -110,7 +110,7 @@ const Coupon = () => {
       }
     }
     try {
-      const res = await axios.put(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/admin/coupon/${id}`, data)
+      await axios.put(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/admin/coupon/${id}`, data)
       getCoupon();
       closeCouponModal()
     } catch (error) {

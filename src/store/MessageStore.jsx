@@ -23,7 +23,7 @@ export const messageReducer = (state, action) => {
 }
 
 
-export function handleSuccessMessage(dispatch, res) {
+export function handleSuccessMessage(dispatch) {
     dispatch({
         type: 'POST_MESSAGE',
         payload: {

@@ -31,7 +31,7 @@ const Cart = () => {
     const removerCartItem = async (id) => {
         setIsLoading(true)
         try {
-            const res = await axios.delete(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/cart/${id}`)
+            await axios.delete(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/cart/${id}`)
             getCartItem()
         } catch (error) {
             console.log(error)
@@ -65,7 +65,7 @@ const Cart = () => {
         })
 
         try {
-            const res = await axios.put(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/cart/${id}`, data)
+            await axios.put(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/cart/${id}`, data)
             getCartItem();
         } catch (error) {
             console.log(error);

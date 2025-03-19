@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function Pagination({ pagination, getProduct, getOrder, type }) {
   return (
     <nav >
@@ -42,3 +44,16 @@ export default function Pagination({ pagination, getProduct, getOrder, type }) {
     </nav>
   )
 }
+
+
+Pagination.propTypes = {
+  pagination: PropTypes.shape({
+    has_pre: PropTypes.bool,
+    current_page: PropTypes.number,
+    total_pages: PropTypes.number,
+    has_next: PropTypes.bool,
+  }),
+  getProduct: PropTypes.func,
+  getOrder: PropTypes.func,
+  type: PropTypes.string,
+};

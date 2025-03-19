@@ -6,7 +6,6 @@ import Pagination from "../../components/Pagination";
 
 export default function Order() {
     const [order, setOrder] = useState([]);
-    const [orderInfo, setOrderInfo] = useState();
     const [orderId, setOrderId] = useState();
     const [pagination, setPagination] = useState();
     const orderBtnModal = useRef(null);
@@ -16,10 +15,10 @@ export default function Order() {
         try {
             const res = await axios.get(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/admin/orders?page=${page}`)
             setOrder(res.data.orders)
-            const orderInformation = res.data.orders
-                .map((item) => Object.values(item.products))
-                .flat();
-            setOrderInfo(orderInformation)
+            // const orderInformation = res.data.orders
+            //     .map((item) => Object.values(item.products))
+            //     .flat();
+            // setOrderInfo(orderInformation)
             setPagination(res.data.pagination)
 
         } catch (error) {
@@ -28,10 +27,8 @@ export default function Order() {
     }
 
     const deleteOrder = async (id) => {
-        console.log(id)
         try {
-            const res = await axios.delete(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/admin/order/${id}`)
-            console.log(res);
+            await axios.delete(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/admin/order/${id}`)
             getOrder();
         } catch (error) {
             console.log(error)
@@ -40,9 +37,8 @@ export default function Order() {
 
     const deleteAllOrder = async () => {
         try {
-            const res = await axios.delete(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/admin/orders/all`)
+            await axios.delete(`/v2/api/${import.meta.env.VITE_APP_API_PATH}/admin/orders/all`)
             getOrder()
-            console.log(res);
         } catch (error) {
             console.log(error)
         }
@@ -187,15 +183,15 @@ export default function Order() {
                         </div>
                         <div className="d-lg-flex d-block justify-content-around align-items-center">
                             <div>
-                                <select className="form-select form-select-sm me-lg-3 me-0 mb-lg-0 mb-3">
-                                    <option defaultValue={null}>2024</option>
+                                <select className="form-select form-select-sm me-lg-3 me-0 mb-lg-0 mb-3" disabled>
+                                    <option defaultValue={null}>Year</option>
                                     <option value="2">2023</option>
                                     <option value="3">2022</option>
                                 </select>
                             </div>
                             <div>
-                                <select className="form-select form-select-sm me-lg-3 me-0 mb-lg-0 mb-3 ">
-                                    <option value="Mon" defaultValue={null}>選擇月份</option>
+                                <select className="form-select form-select-sm me-lg-3 me-0 mb-lg-0 mb-3 " disabled>
+                                    <option value="Mon" defaultValue={null}>Mon.</option>
                                     <option value="1">Jan</option>
                                     <option value="2">Feb</option>
                                     <option value="3">Mar</option>
@@ -211,19 +207,19 @@ export default function Order() {
                                 </select>
                             </div>
                             <div>
-                                <select className="form-select form-select-sm me-lg-3 me-0 mb-lg-0 mb-3 ">
-                                    <option defaultValue={null}>選擇日期</option>
+                                <select className="form-select form-select-sm me-lg-3 me-0 mb-lg-0 mb-3" disabled>
+                                    <option defaultValue={null}>Date</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                 </select>
                             </div>
-                            <div>
+                            <div className="ms-3">
                                 <input className="outline-0 w-100" type="search" placeholder="Search Order" />
                             </div>
                         </div>
                         <div className="text-end mt-4">
-                            <button className="btn btn-primary btn-sm me-1" type="button" data-bs-toggle="modal" data-bs-target="#statistic">Sales Statistics</button>
+                            <button className="btn btn-primary btn-sm me-1" type="button" data-bs-toggle="modal" data-bs-target="#statistic" disabled>Sales Statistics</button>
                             <button type="button" className="btn btn-primary btn-sm">Search</button>
                         </div>
                     </div>

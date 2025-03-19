@@ -100,7 +100,9 @@ export default function Home() {
 
   const ulRef = useRef(null);
   const [currentLargePic, setCurrentLargePic] = useState(2);
-  const [move, setMove] = useState(0);
+  // const [move, setMove] = useState(0);
+  const [, setMove] = useState(0);
+
 
   const slideR = () => {
     if (currentLargePic < 4) {

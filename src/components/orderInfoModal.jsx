@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
-import React from "react";
+import PropTypes from 'prop-types';
+
 
 export default function OrderInfoModal({ close, orderId }) {
     const [product, setProduct] = useState([]);
@@ -20,18 +21,17 @@ export default function OrderInfoModal({ close, orderId }) {
     return (<>
 
         <div className="modal fade" id="orderModal">
-            {JSON.stringify(product)}
             <div className="modal-dialog">
                 <div className="modal-content">
                     <div className="modal-header border-0">
-                        <h5 className="modal-title" id="exampleModalLabel">訂單編號：#001</h5>
+                        <h5 className="modal-title" id="exampleModalLabel">Order Number：#001</h5>
                         <button type="button" className="btn-close" onClick={close}></button>
                     </div>
                     <div className="modal-body">
                         {product.map((item, index) => {
-                            return (<React.Fragment key={index}>
-                                <p>Product： {item.title}* {item.qty}</p>
-                            </React.Fragment>)
+                            return (<div key={index}>
+                                <p >Product： {item.title}* {item.qty}</p>
+                            </div>)
                         })}
                         <p>Address：{orderId?.user?.address}</p>
                         <p>Total：${orderId?.total}</p>
@@ -47,3 +47,24 @@ export default function OrderInfoModal({ close, orderId }) {
         </div>
     </>)
 }
+
+
+
+OrderInfoModal.propTypes = {
+    close: PropTypes.func,
+    orderId: PropTypes.shape({
+        products: PropTypes.objectOf(
+            PropTypes.shape({
+                product: PropTypes.shape({
+                    title: PropTypes.string.isRequired
+                }).isRequired,
+                qty: PropTypes.number.isRequired
+            })
+        ),
+        user: PropTypes.shape({
+            address: PropTypes.string,
+        }),
+        total: PropTypes.number,
+        is_paid: PropTypes.bool,
+    })
+};

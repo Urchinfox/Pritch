@@ -18,7 +18,6 @@ export default function OrderSuccess() {
             setOrder(productAry);
 
             setUser(res.data.order.user)
-            console.log(productAry)
 
         } catch (error) {
             console.log(error)
@@ -69,7 +68,7 @@ export default function OrderSuccess() {
                                         </thead>
                                         <tbody>
                                             {order?.map((item, index) => {
-                                                return (<>
+                                                return (
                                                     <tr className="text-center" key={index}>
                                                         {
                                                             item?.coupon?.percent > 0 ? <td><span className="badge bg-success ms-3">{100 - item?.coupon?.percent} Off</span></td>
@@ -82,7 +81,7 @@ export default function OrderSuccess() {
                                                         </td>
                                                     </tr>
 
-                                                </>)
+                                                )
                                             })}
 
                                         </tbody>
